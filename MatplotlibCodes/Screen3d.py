@@ -20,7 +20,7 @@ ax.plot_surface(x, y, z, color='c', alpha=0.6, rstride=1, cstride=1, edgecolor='
 
 # 选取侧面的一个四边形面
 # 例如选取靠近 x 轴正方向的一个四边形
-i, j = 17, 11  # 选取网格的某个中间位置，避免在顶端或底端
+i, j = 17, 11  # 选取网格的某个中间位置, 避免在顶端或底端
 vertices = np.array([
     [x[i, j], y[i, j], z[i, j]],
     [x[i+1, j], y[i+1, j], z[i+1, j]],

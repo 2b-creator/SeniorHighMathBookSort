@@ -52,7 +52,7 @@ m_between = (y_tangent2 - y_tangent1) / (x_tangent2 - x_tangent1)
 def tangent_line(m, x_0, y_0, x_range):
     return m * (x_range - x_0) + y_0
 
-# 设定x的范围，用于延伸直线
+# 设定x的范围, 用于延伸直线
 x_range = np.linspace(-10, 20, 100)
 
 # 绘制圆
@@ -60,7 +60,7 @@ plt.plot(x_circle, y_circle, label="Circle")  # 画圆
 plt.scatter(x_0, y_0, color='red', label="Point")  # 画点
 plt.text(x_0, y_0, f"$P(x_0,y_0)$",font_title, verticalalignment='top', horizontalalignment='left')
 
-# 画切线，扩展为直线
+# 画切线, 扩展为直线
 plt.plot(x_range, tangent_line(m1, x_0, y_0, x_range), 'g-', label="Tangent 1")
 plt.plot(x_range, tangent_line(m2, x_0, y_0, x_range), 'b-', label="Tangent 2")
 

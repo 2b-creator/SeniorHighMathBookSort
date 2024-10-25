@@ -11,7 +11,7 @@ r = 5  # 大圆的半径
 delta_r = 1  # Δr
 r_small = r - delta_r  # 小圆的半径
 
-# 创建角度数组，用于绘制圆
+# 创建角度数组, 用于绘制圆
 theta = np.linspace(0, 2 * np.pi, 100)
 
 # 计算大圆和小圆的x, y坐标
@@ -21,7 +21,7 @@ y_large_circle = r * np.sin(theta)
 x_small_circle = r_small * np.cos(theta)
 y_small_circle = r_small * np.sin(theta)
 
-# 重新绘制圆并标出两个圆的半径，同时去除坐标轴
+# 重新绘制圆并标出两个圆的半径, 同时去除坐标轴
 plt.figure(figsize=(11,6))
 
 # 绘制大圆和小圆
@@ -34,7 +34,7 @@ plt.text(r/2, 0.2, f'r = {r}', color='blue', fontsize=12)
 
 plt.plot([0, r_small], [0, 0], 'green', linestyle='--')  # 小圆半径线
 
-# 设置图形的比例，使圆形不会被拉伸成椭圆
+# 设置图形的比例, 使圆形不会被拉伸成椭圆
 plt.gca().set_aspect('equal')
 
 # 去除坐标轴

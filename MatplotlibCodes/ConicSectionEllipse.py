@@ -39,7 +39,7 @@ plt.axvline(x=0, color='black', linewidth=1)  # y轴
 plt.xlim(-9, 9)
 plt.ylim(-9, 9)
 
-# 去掉图形的上和右边框，使其像数轴
+# 去掉图形的上和右边框, 使其像数轴
 plt.gca().spines['top'].set_color('none')
 plt.gca().spines['right'].set_color('none')
 
@@ -47,7 +47,7 @@ plt.gca().spines['right'].set_color('none')
 plt.gca().spines['bottom'].set_position('zero')
 plt.gca().spines['left'].set_position('zero')
 
-# 去掉刻度线，只保留主要的标记
+# 去掉刻度线, 只保留主要的标记
 plt.gca().xaxis.set_ticks_position('bottom')
 plt.gca().yaxis.set_ticks_position('left')
 
@@ -63,7 +63,7 @@ plt.title("Ellipse with Foci")
 # 去掉网格
 plt.grid(False)
 
-# 调整图像的布局，使图例不会被裁剪
+# 调整图像的布局, 使图例不会被裁剪
 plt.tight_layout()
 plt.savefig("./out/ConicSection2Define.eps", format="eps", dpi=600)
 # 显示图像

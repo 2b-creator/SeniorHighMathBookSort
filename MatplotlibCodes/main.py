@@ -19,7 +19,7 @@ plt.text(3, 1, "$A$", font_title, color="navy")
 plt.text(4, 0, "$B$", font_title, color="orange")
 
 plt.text(-0.5, 2.5, "$a+b=1$", font_title, color="black")
-# 修改 plt.plot() 参数，使直线从 a 的终点到 a+b 的终点
+# 修改 plt.plot() 参数, 使直线从 a 的终点到 a+b 的终点
 plt.axline((4, 0), (2, 2))
 plt.axline((5, 1), (3, 3), ls="-.")
 plt.text(3.5, 2.5, "$a+b=x$", font_title, color="black")

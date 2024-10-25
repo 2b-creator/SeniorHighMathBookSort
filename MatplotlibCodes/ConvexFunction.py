@@ -9,7 +9,7 @@ plt.rcParams.update({
     "font.size": 14,
 })
 # 定义x的范围和精度
-x = np.linspace(-2, 10, 1000)  # 从-1到2，总共1000个点
+x = np.linspace(-2, 10, 1000)  # 从-1到2, 总共1000个点
 x_0, y_0 = 5, np.log(5)
 x_1, y_1 = 0.25, np.log(0.25)
 x_m, y_m, y_lm = (x_0 + x_1) / 2, (y_0 + y_1) / 2, np.log((x_0 + x_1) / 2)
@@ -33,7 +33,7 @@ plt.plot(x, y, label=r"$f(x)=\ln x$")
 plt.plot(x, z)
 plt.title(r"Convex function of $f(x)=\ln x$")
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-# 去掉图形的上和右边框，使其像数轴
+# 去掉图形的上和右边框, 使其像数轴
 plt.gca().spines['top'].set_color('none')
 plt.gca().spines['right'].set_color('none')
 
@@ -41,7 +41,7 @@ plt.gca().spines['right'].set_color('none')
 plt.gca().spines['bottom'].set_position('zero')
 plt.gca().spines['left'].set_position('zero')
 
-# 去掉刻度线，只保留主要的标记
+# 去掉刻度线, 只保留主要的标记
 plt.gca().xaxis.set_ticks_position('bottom')
 plt.gca().yaxis.set_ticks_position('left')
 plt.gca().set_aspect("equal")
