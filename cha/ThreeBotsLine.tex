@@ -1,0 +1,27 @@
+\tdplotsetmaincoords{70}{110}
+        \begin{tikzpicture}[yscale=2,xscale=2,line width=0.8pt,tdplot_main_coords]
+            %% ===========================================
+            \coordinate (A) at (0,0,0);
+            \coordinate (B) at (4,0,0);
+            \coordinate (C) at (4,3,0);
+            \coordinate (D) at (0,3,0);
+            
+            \coordinate (A1) at (2,1,0);
+            \coordinate (B1) at (2,1,2);
+            \coordinate (O) at (2,2,0);
+            \coordinate (C1) at (1,2,0);
+            \coordinate (D1) at (3,2,0);
+            % %% ===========================================
+            % \draw[rounded corners=0.05pt](D1)circle (0.25pt)node[right]{$D_1$}--(A1)circle (0.25pt)node[above]{$A_1$}--(B1)circle (0.25pt)node[left=2pt]{$B_1$}--
+            % (C1)circle (0.25pt)node[above=2pt]{$C_1$}--(D1)--(D)circle (0.25pt)node[right=2pt]{$D$}(C)circle (0.25pt)node[below=2pt]{$C$}--
+            % (B)circle (0.25pt)node[below=2pt]{$B$}--(M)circle (0.25pt)node[left=2pt]{$M$}
+            % (B1)--(C1)--(C)--(M)--(B1)(C)--(D)(A)circle (0.25pt)node[left=4pt,above]{$A$};
+            % %% ===========================================
+            % \draw[thin,dash pattern=on 3pt off 2pt](A1)--(A)
+            % (B)--(A)--(D)(A)--(A1)--(M)--(A1)--(C);
+
+            %% ===========================================
+            \draw[rounded corners=0.05pt](A)--(B)circle (0.25pt)node[above=2.5pt,right=3pt]{$\alpha$}--(C)--(D)--(A);
+            \draw[rounded corners=0.05pt](A1)circle (0.25pt)node[above=2.5pt,left=3pt]{$A$}--(B1)circle (0.25pt)node[above=2.5pt,right=3pt]{$B$}--(O)circle (0.25pt)node[above=1pt,right=1pt]{$O$}--(A1);
+            \draw[rounded corners=0.05pt](D1)circle (0.25pt)node[above=2.5pt,left=3pt]{$D$}--(C1)circle (0.25pt)node[above=2.5pt]{$C$};
+        \end{tikzpicture}
