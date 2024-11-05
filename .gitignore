@@ -32,7 +32,6 @@ DS_Store
 # Generated files
 *.dvi
 *.ps
-*.pdf
 
 # Editor and IDE files
 *.swp
