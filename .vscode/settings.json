@@ -61,5 +61,13 @@
             ]
         }
     ],
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%'"
+    ],
+    "latex-workshop.formatting.latexindent.path": "/Library/TeX/texbin/latexindent",
+    "latex-workshop.formatting.latex": "latexindent",
     "editor.wordWrap": "on"
 }

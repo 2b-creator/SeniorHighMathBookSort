@@ -9,7 +9,6 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{float}
-
 \usepackage{tikz,times,amsmath} %%分别是绘图宏包, 字体宏包, 数学公式宏包
 %\usepackage{pgfplots} %% 这个宏包可以不加
 \usepackage{tikz-3dplot} %%三维图形绘制需要的宏包
@@ -44,143 +43,143 @@
 }
 
 \begin{document}
-    \maketitle
-    \tableofcontents
-    \chapter{序言}
-    \section{编者序}
-    感谢你翻开这本书.
+\maketitle
+\tableofcontents
+\chapter{序言}
+\section{编者序}
+感谢你翻开这本书.
 
-    作为一个科研狗天天要用\LaTeX, 编这本书的目的是希望有一个自己的\LaTeX 作品, 练习之余也是将其作为一个艺术品来看, 同时也是出于对数学和计算机学的热爱. 不过在正式编排本书之前, 编者也曾想过是否有一个合适且高质量的数学内容整理, 来给同样热爱数学的大家发现数学之美. 编写这些内容, 首先选材难度是要有的, 过于简单枯燥没有思维深度则不是一个好书; 然而一味地追求难度更是不切实际, 结果只会适得其反, 甚至有``装逼''之嫌.
+作为一个科研狗天天要用\LaTeX, 编这本书的目的是希望有一个自己的\LaTeX 作品, 练习之余也是将其作为一个艺术品来看, 同时也是出于对数学和计算机学的热爱. 不过在正式编排本书之前, 编者也曾想过是否有一个合适且高质量的数学内容整理, 来给同样热爱数学的大家发现数学之美. 编写这些内容, 首先选材难度是要有的, 过于简单枯燥没有思维深度则不是一个好书; 然而一味地追求难度更是不切实际, 结果只会适得其反, 甚至有``装逼''之嫌.
 
-    同时编者又属于是INFP体质(虽然说这是一个刻板印象, 而且编者也不希望简单的将人格扁平化, 但是我还是喜欢拿MBTI来说事情), 喜欢有些``不切实际"的幻想, 想着有个非常完美的数学作品但是又懒得去动手, 整天想着做但是又是完美主义又怕做不好(是的, 我的内耗就这么简单).
+同时编者又属于是INFP体质(虽然说这是一个刻板印象, 而且编者也不希望简单的将人格扁平化, 但是我还是喜欢拿MBTI来说事情), 喜欢有些``不切实际"的幻想, 想着有个非常完美的数学作品但是又懒得去动手, 整天想着做但是又是完美主义又怕做不好(是的, 我的内耗就这么简单).
 
-    后来在BiliBili见到了一个专题, 来自于``小各的数学草稿''这位up主, 这就是本书的主题``高中课本的`隐藏'知识'', 这让编者感到相见恨晚, 选材独到, 源于课本又高于课本, 接地气的同时又充满了高级感. 唯一美中不足的是让编者强迫症犯的排版, 同时, 编者的梦想也算是有了一个着落, 在此感谢这位up主.
+后来在BiliBili见到了一个专题, 来自于``小各的数学草稿''这位up主, 这就是本书的主题``高中课本的`隐藏'知识'', 这让编者感到相见恨晚, 选材独到, 源于课本又高于课本, 接地气的同时又充满了高级感. 唯一美中不足的是让编者强迫症犯的排版, 同时, 编者的梦想也算是有了一个着落, 在此感谢这位up主.
 
-    也算是在这本书上倾注了很多心血, 包括使用Matplotlib绘制二维图片, 用\LaTeX 自带的 tikz 宏包绘制三维图片, 如果你使用电子介质阅读本书, 你将会发现得益于eps矢量图的特性, 书中的每一张图片中的每一个文字都可以复制, 每一条线都可以被无限放大而不失真. 至于绘制图片以及整本书的代码, 编者将会在使用说明章节中放置其开源地址, 本书完全免费自由, 但是我深深赞同费曼教授所言:``Knowledge isn't free. You have to pay attention." 从这个意义上看, 这本书却又并非完全“免费”. 对编者, 作者与读者都需要付诸大量的注意力, 只不过为了不辜负你为本书所付出的宝贵``注意力", 我会竭尽所能, 投入最大的``注意力"来完成本书的创作. 
+也算是在这本书上倾注了很多心血, 包括使用Matplotlib绘制二维图片, 用\LaTeX 自带的 tikz 宏包绘制三维图片, 如果你使用电子介质阅读本书, 你将会发现得益于eps矢量图的特性, 书中的每一张图片中的每一个文字都可以复制, 每一条线都可以被无限放大而不失真. 至于绘制图片以及整本书的代码, 编者将会在使用说明章节中放置其开源地址, 本书完全免费自由, 但是我深深赞同费曼教授所言:``Knowledge isn't free. You have to pay attention." 从这个意义上看, 这本书却又并非完全“免费”. 对编者, 作者与读者都需要付诸大量的注意力, 只不过为了不辜负你为本书所付出的宝贵``注意力", 我会竭尽所能, 投入最大的``注意力"来完成本书的创作.
 
-    虽然编者没有光辉的学历背景, 在这人均985的互联网中显得有些自惭形秽, 但是学历只是其中的一个加分项而不是必须项; 只是很幸运, 这本书``找到''了热爱数学的你, 一同探究高中数学课本的知识; 希望你看完后, 你的水平能够更上一层楼.
+虽然编者没有光辉的学历背景, 在这人均985的互联网中显得有些自惭形秽, 但是学历只是其中的一个加分项而不是必须项; 只是很幸运, 这本书``找到''了热爱数学的你, 一同探究高中数学课本的知识; 希望你看完后, 你的水平能够更上一层楼.
 
-    再次感谢你翻开这本书.
+再次感谢你翻开这本书.
 
-    {\hfill 琴剑天意}
+{\hfill 琴剑天意}
 
-    {\hfill \today}
+{\hfill \today}
 
-    \section{本书资源}
-    本书使用\LaTeX 编写, 编译器为Xelatex, 关于本书的\LaTeX 源码可以在编者的GitHub上找到, 仓库名称为SeniorHighMathBookSort, 同时给出项目地址在: \\https://github.com/2b-creator/SeniorHighMathBookSort; 有能力想要参与编辑的可以在此处添加 pull request. 更重要的是, 这里也是本书的更新发布的地方, 读者可以前往连接找到文件main.pdf即可下载最新构建的书籍文件.
+\section{本书资源}
+本书使用\LaTeX 编写, 编译器为Xelatex, 关于本书的\LaTeX 源码可以在编者的GitHub上找到, 仓库名称为SeniorHighMathBookSort, 同时给出项目地址在: \\https://github.com/2b-creator/SeniorHighMathBookSort; 有能力想要参与编辑的可以在此处添加 pull request. 更重要的是, 这里也是本书的更新发布的地方, 读者可以前往连接找到文件main.pdf即可下载最新构建的书籍文件.
 
-    关于插图, 部分三维图像使用\LaTeX 自带的tikz制图工具, 不过大部分则得到了Matplotlib的大力支持, 在项目仓库的/MatplotlibCodes/文件夹下; 本书插图使用eps格式以保证其可修改性, 且eps格式具备良好的跨平台兼容性, 适合嵌入到学术文档中. Matplotlib的图像文件通过 savefig() 方法导出成高分辨率的eps格式, 以确保在不同分辨率下的清晰度. 本书在设计插图时, 力求简洁明了, 以辅助读者更好地理解复杂的内容. 在代码注释和图形设计的交互中, 也采用了多种色彩和样式, 以突出不同的曲线, 数据点和坐标轴, 从而提高图形的直观性和可读性. 
+关于插图, 部分三维图像使用\LaTeX 自带的tikz制图工具, 不过大部分则得到了Matplotlib的大力支持, 在项目仓库的/MatplotlibCodes/文件夹下; 本书插图使用eps格式以保证其可修改性, 且eps格式具备良好的跨平台兼容性, 适合嵌入到学术文档中. Matplotlib的图像文件通过 savefig() 方法导出成高分辨率的eps格式, 以确保在不同分辨率下的清晰度. 本书在设计插图时, 力求简洁明了, 以辅助读者更好地理解复杂的内容. 在代码注释和图形设计的交互中, 也采用了多种色彩和样式, 以突出不同的曲线, 数据点和坐标轴, 从而提高图形的直观性和可读性.
 
-    本书所有内容均从高中课本出发, 读者不妨可以旁边准备一本人教A版的高中数学书. 不仅如此, 本书涵盖了一些论文引用, 读者可以在本书最后的参考文献选读. 不过这些文献的大部分内容可能与高中课本知识没啥大的关系, 如果你是一个高中生为了高考, 请不要过度深入研究相关板块.
-    \section{版权}
-    本书使用 CC 协议: 署名-非商业性使用-相同方式共享 (BY-NC-SA)\cite{cccommons}这意味着:
-    \begin{itemize}
-        \item 署名 (BY): 您可以转载, 复制, 分发和再创作本书的内容, 但需要明确署名, 表明出处. 
-        \item 非商业性使用 (NC): 不允许将本书的内容用于商业用途. 
-        \item 相同方式共享 (SA):若对本书内容进行修改或衍生作品创作, 您必须使用与本书相同的许可证分享您的作品. 
-    \end{itemize}
+本书所有内容均从高中课本出发, 读者不妨可以旁边准备一本人教A版的高中数学书. 不仅如此, 本书涵盖了一些论文引用, 读者可以在本书最后的参考文献选读. 不过这些文献的大部分内容可能与高中课本知识没啥大的关系, 如果你是一个高中生为了高考, 请不要过度深入研究相关板块.
+\section{版权}
+本书使用 CC 协议: 署名-非商业性使用-相同方式共享 (BY-NC-SA)\cite{cccommons}这意味着:
+\begin{itemize}
+    \item 署名 (BY): 您可以转载, 复制, 分发和再创作本书的内容, 但需要明确署名, 表明出处.
+    \item 非商业性使用 (NC): 不允许将本书的内容用于商业用途.
+    \item 相同方式共享 (SA):若对本书内容进行修改或衍生作品创作, 您必须使用与本书相同的许可证分享您的作品.
+\end{itemize}
 
-    该协议确保了知识的开放性和共享性, 鼓励读者在符合这些条件的前提下自由地使用, 改编和传播本书内容. 同样的, 代码使用了GNU GENERAL PUBLIC LICENSE v3.0, 这意味着如果你使用了我们的代码就必须将其开源且不得用为商业用途.
+该协议确保了知识的开放性和共享性, 鼓励读者在符合这些条件的前提下自由地使用, 改编和传播本书内容. 同样的, 代码使用了GNU GENERAL PUBLIC LICENSE v3.0, 这意味着如果你使用了我们的代码就必须将其开源且不得用为商业用途.
 
-    值得一提的是, 对于本书的知识, 若借鉴并使用在你的文章中发表; 您无需在你的文章中声明引用, 但是这不是大段复制本文文本或代码. 如果您这样做, 可以考虑声明引用, 尽管这是一件微不足道的事情, 但是也算是对作者的一种尊重, 感谢您的理解.
+值得一提的是, 对于本书的知识, 若借鉴并使用在你的文章中发表; 您无需在你的文章中声明引用, 但是这不是大段复制本文文本或代码. 如果您这样做, 可以考虑声明引用, 尽管这是一件微不足道的事情, 但是也算是对作者的一种尊重, 感谢您的理解.
 
-    关于侵权, 本书所有内容若涉及侵权, 请携带相关证明联系QQ:3070025462或邮箱地址:qjtykr65536@gmail.com提出修改或删除, 并在此对我们构成侵权之事为您道歉.
-    \section{使用说明}
-    %本文原作者B站id: 小各的数学草稿, 本人仅作包括自己见解的\LaTeX 排版.
+关于侵权, 本书所有内容若涉及侵权, 请携带相关证明联系QQ:3070025462或邮箱地址:qjtykr65536@gmail.com提出修改或删除, 并在此对我们构成侵权之事为您道歉.
+\section{使用说明}
+%本文原作者B站id: 小各的数学草稿, 本人仅作包括自己见解的\LaTeX 排版.
 
-    为了能够方便读者高效阅读, 建议按照使用说明进行阅读.
+为了能够方便读者高效阅读, 建议按照使用说明进行阅读.
 
-    本书插图与图例均含有彩色, 我们建议读者使用电子介质或彩色打印阅读, 然而只有黑白灰度依旧可以阅读, 我们会尽力优化此类读者的阅读体验.
+本书插图与图例均含有彩色, 我们建议读者使用电子介质或彩色打印阅读, 然而只有黑白灰度依旧可以阅读, 我们会尽力优化此类读者的阅读体验.
 
-    所以, 关于色彩提示, 我们将按照下面的规则行文:
+所以, 关于色彩提示, 我们将按照下面的规则行文:
 
-    \begin{enumerate}
-        \item 黑色的字迹是主要的过程与一般性的文字
-        \item \textcolor[rgb]{0.38,0.11,0.2}{紫色的字迹是拓展的知识或公式}
-        \item \textcolor[rgb]{0.75,0.17,0.22}{红色的字迹是证明的较关键步骤}
-        \item \textcolor[rgb]{0.11,0.65,0.52}{绿色的字迹是在课本上的相关出处}
-        \item \textcolor[rgb]{0.13,0.47,0.72}{蓝色的字迹是编者加的用于框出题目}
-    \end{enumerate}
+\begin{enumerate}
+    \item 黑色的字迹是主要的过程与一般性的文字
+    \item \textcolor[rgb]{0.38,0.11,0.2}{紫色的字迹是拓展的知识或公式}
+    \item \textcolor[rgb]{0.75,0.17,0.22}{红色的字迹是证明的较关键步骤}
+    \item \textcolor[rgb]{0.11,0.65,0.52}{绿色的字迹是在课本上的相关出处}
+    \item \textcolor[rgb]{0.13,0.47,0.72}{蓝色的字迹是编者加的用于框出题目}
+\end{enumerate}
 
-    对于证明题, 证毕后会带上一个象征性的$qed$符号代表结束$\blacksquare$
+对于证明题, 证毕后会带上一个象征性的$qed$符号代表结束$\blacksquare$
 
-    \section{特别鸣谢}
-    本鸣谢名单收录最早提出相关修改建议的读者, 感谢你们的付出让这个项目更加完美!
-    \begin{enumerate}
-        \item bilibili 芜湖菜菜子 uid-33071462 凹凸性相关勘误
-        \item bilibili JamesShen16 uid-516283330 提出分别对应英文Convex和Concave的相关勘误
-        \item bilibili 早仓雅 uid-82799 和差化积相关证明, 二位权方和相关证明, 勘误
-    \end{enumerate}
-    %我们鼓励读者养成独立思考的习惯, 某些题目后面会跟一点小练习, 请尝试完成它; 如果你准备好了, 那就翻到第二章开始阅读吧!
-    \chapter{必修一}
-    \section{\textcolor[rgb]{0.11,0.65,0.52}{P43, T9}}
-    \begin{boxB}
-        证明: 圆的面积大于与它具有相同周长的正方形的面积. 并据此说明, 人们通常把自来水管的横截面制成圆形而不是正方形的原因.
-    \end{boxB}
-    \doublespacing
-    证明: 设两者周长均为$C$, 则圆的半径为$\displaystyle \frac{C}{2\pi}$, 而正方形边长为$\displaystyle \frac{C}{4}$, 故圆面积为$\displaystyle \pi(\frac{C}{2\pi})^2=\frac{C^2}{4\pi}$, 正方形面积$\displaystyle (\frac{C}{4})^2=\frac{C^2}{16}$.
+\section{特别鸣谢}
+本鸣谢名单收录最早提出相关修改建议的读者, 感谢你们的付出让这个项目更加完美!
+\begin{enumerate}
+    \item bilibili 芜湖菜菜子 uid-33071462 凹凸性相关勘误
+    \item bilibili JamesShen16 uid-516283330 提出分别对应英文Convex和Concave的相关勘误
+    \item bilibili 早仓雅 uid-82799 和差化积相关证明, 二位权方和相关证明, 勘误
+\end{enumerate}
+%我们鼓励读者养成独立思考的习惯, 某些题目后面会跟一点小练习, 请尝试完成它; 如果你准备好了, 那就翻到第二章开始阅读吧!
+\chapter{必修一}
+\section{\textcolor[rgb]{0.11,0.65,0.52}{P43, T9}}
+\begin{boxB}
+    证明: 圆的面积大于与它具有相同周长的正方形的面积. 并据此说明, 人们通常把自来水管的横截面制成圆形而不是正方形的原因.
+\end{boxB}
+\doublespacing
+证明: 设两者周长均为$C$, 则圆的半径为$\displaystyle \frac{C}{2\pi}$, 而正方形边长为$\displaystyle \frac{C}{4}$, 故圆面积为$\displaystyle \pi(\frac{C}{2\pi})^2=\frac{C^2}{4\pi}$, 正方形面积$\displaystyle (\frac{C}{4})^2=\frac{C^2}{16}$.
 
-    又因为$\displaystyle 4\pi < 4 \times 4 = 16$
+又因为$\displaystyle 4\pi < 4 \times 4 = 16$
 
-    故在该条件下圆面积更大, 原因: 在横截面积一定情况圆耗费材料少.$\blacksquare$
+故在该条件下圆面积更大, 原因: 在横截面积一定情况圆耗费材料少.$\blacksquare$
 
-    \textcolor[rgb]{0.38,0.11,0.2}{拓展引申: 周长相等的情况下, 圆的面积最大. (证明用到变分法)}
-    \section{\textcolor[rgb]{0.11,0.65,0.52}{P43, T10}}
-    \begin{boxB}
-        已知$a$克糖水中含有$b$克糖$(a>b>0)$,再添加$m$克糖$(m>0)$(假设全部溶解), 糖水变甜了, 请将这一事实表示为不等式,并证明这个不等式成立.
-    \end{boxB}
+\textcolor[rgb]{0.38,0.11,0.2}{拓展引申: 周长相等的情况下, 圆的面积最大. (证明用到变分法)}
+\section{\textcolor[rgb]{0.11,0.65,0.52}{P43, T10}}
+\begin{boxB}
+    已知$a$克糖水中含有$b$克糖$(a>b>0)$,再添加$m$克糖$(m>0)$(假设全部溶解), 糖水变甜了, 请将这一事实表示为不等式,并证明这个不等式成立.
+\end{boxB}
 
-    本题涉及\textcolor[rgb]{0.38,0.11,0.2}{糖水不等式}:
-    $$
+本题涉及\textcolor[rgb]{0.38,0.11,0.2}{糖水不等式}:
+$$
     \frac{b}{a} < \frac{b+c}{a+c}, a>b>0, c>0
-    $$
+$$
 
-    证明过程:通过\textcolor[rgb]{0.75,0.17,0.22}{作差法}可得:
-    $$
+证明过程:通过\textcolor[rgb]{0.75,0.17,0.22}{作差法}可得:
+$$
     \frac{b+c}{a+c} - \frac{b}{a} = \frac{(a-b)c}{a(a+c)}
-    $$
+$$
 
-    由$a>b$可得$a-b>0$, 而$a,b,c$均大于$0$, 故 $\displaystyle \frac{(a-b)c}{a(a+c)}>0. \blacksquare$
+由$a>b$可得$a-b>0$, 而$a,b,c$均大于$0$, 故 $\displaystyle \frac{(a-b)c}{a(a+c)}>0. \blacksquare$
 
-    编者有话说: 由于是糖水, 所以糖与糖水的比例肯定不会超过1,所以我们可以用1比较:
-    $$
+编者有话说: 由于是糖水, 所以糖与糖水的比例肯定不会超过1,所以我们可以用1比较:
+$$
     1-\frac{b}{a}=\frac{a-b}{a},1-\frac{b+c}{a+c}=\frac{a-b}{a+c}
-    $$
-    $$
+$$
+$$
     \frac{a-b}{a}>\frac{a-b}{a+c}
-    $$
+$$
 
-    由此得证.$\blacksquare$
+由此得证.$\blacksquare$
 
-    \section{\textcolor[rgb]{0.11,0.65,0.52}{P75}}
-    涉及\textcolor[rgb]{0.38,0.11,0.2}{狄利克雷函数}的相关问题:
+\section{\textcolor[rgb]{0.11,0.65,0.52}{P75}}
+涉及\textcolor[rgb]{0.38,0.11,0.2}{狄利克雷函数}的相关问题:
 
-    随着对微积分研究的深入, 18世纪末19世纪初, 入们对函数的认识向前推进了.德国数学家狄利克雷(P. G. L. Dirichlet, 1805—1859) 在1837年时提出: ``如果对于$z$ 的每一个值, $y$总有一个完全确定的值与之对应, 那么$y$是$z$的函数."这个定义较清楚地说明了函数的内涵. 只要有一个法则, 使得取值范围中的每一个$z$, 有一个确定的和它对应就行了, 不管这个法则是用公式还是用图象, 表格等形式表示.例如, 狄利克雷函数, 即: 当自变量取有理数时, 函数值为1;当自变量取无理数时, 函数值为0.它只能用对应的语言予以表达.19世纪70年代以后, 随着集合概念的出现, 函数概念又进而用更加严谨的集合和对应语言表述, 这就是本节学习的函数概念.综上所述可知, 函数概念的发展与生产, 生活以及科学技术的实际需要紧密相关, 而且随着研究的深入, 函数概念不断得到严谨化, 精确化的表达, 这与我们学习函数的过程是一样的.
+随着对微积分研究的深入, 18世纪末19世纪初, 入们对函数的认识向前推进了.德国数学家狄利克雷(P. G. L. Dirichlet, 1805—1859) 在1837年时提出: ``如果对于$z$ 的每一个值, $y$总有一个完全确定的值与之对应, 那么$y$是$z$的函数."这个定义较清楚地说明了函数的内涵. 只要有一个法则, 使得取值范围中的每一个$z$, 有一个确定的和它对应就行了, 不管这个法则是用公式还是用图象, 表格等形式表示.例如, 狄利克雷函数, 即: 当自变量取有理数时, 函数值为1;当自变量取无理数时, 函数值为0.它只能用对应的语言予以表达.19世纪70年代以后, 随着集合概念的出现, 函数概念又进而用更加严谨的集合和对应语言表述, 这就是本节学习的函数概念.综上所述可知, 函数概念的发展与生产, 生活以及科学技术的实际需要紧密相关, 而且随着研究的深入, 函数概念不断得到严谨化, 精确化的表达, 这与我们学习函数的过程是一样的.
 
-    这是\textcolor[rgb]{0.38,0.11,0.2}{狄利克雷函数}:
-    $$
-    f(x)=\begin{array}{l} 
-            \left\{\begin{matrix} 
-            1 \quad x \in \mathbb{Q} \\ 
-            0 \quad x \in \mathbb{R} \setminus \mathbb{Q} \
-          \end{matrix}\right.    
-        \end{array} 
-    $$
+这是\textcolor[rgb]{0.38,0.11,0.2}{狄利克雷函数}:
+$$
+    f(x)=\begin{array}{l}
+        \left\{\begin{matrix}
+                   1 \quad x \in \mathbb{Q} \\
+                   0 \quad x \in \mathbb{R} \setminus \mathbb{Q} \
+               \end{matrix}\right.
+    \end{array}
+$$
 
-    \section{\textcolor[rgb]{0.11,0.65,0.52}{P87, T13}}
-    \textcolor[rgb]{0.38,0.11,0.2}{对称性}和\textcolor[rgb]{0.38,0.11,0.2}{奇偶性}的关系.
+\section{\textcolor[rgb]{0.11,0.65,0.52}{P87, T13}}
+\textcolor[rgb]{0.38,0.11,0.2}{对称性}和\textcolor[rgb]{0.38,0.11,0.2}{奇偶性}的关系.
 
-    $f(x)$为奇函数表明关于$(0,0)$中心对称, $f(x)$为偶函数表明关于$x=0$对称.
+$f(x)$为奇函数表明关于$(0,0)$中心对称, $f(x)$为偶函数表明关于$x=0$对称.
 
-    \begin{boxB}
-        证明: $y=f(x)$的图象关于点$P(a,b)$成中心对称图形的充要条件是函数$y=f(x+a)-b$为奇函数.
-    \end{boxB}
+\begin{boxB}
+    证明: $y=f(x)$的图象关于点$P(a,b)$成中心对称图形的充要条件是函数$y=f(x+a)-b$为奇函数.
+\end{boxB}
 
-    \textcolor[rgb]{0.75,0.17,0.22}{充分性}:
-        关于$(a,b)$中心対称$\Longrightarrow f(x)+f(2a-x)=2b\Longrightarrow f(x+a)+f(a-x)=2b$通过变形:$f(x+a)-b=-f(a-x)+b=-[f(a-x)-b]$满足其为奇函数$-f(x)=f(-x)$
+\textcolor[rgb]{0.75,0.17,0.22}{充分性}:
+关于$(a,b)$中心対称$\Longrightarrow f(x)+f(2a-x)=2b\Longrightarrow f(x+a)+f(a-x)=2b$通过变形:$f(x+a)-b=-f(a-x)+b=-[f(a-x)-b]$满足其为奇函数$-f(x)=f(-x)$
 
-    \textcolor[rgb]{0.75,0.17,0.22}{必要性}:
-    $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f(x+a)+f(a-x)=2b$$\Longrightarrow$关于$(a,b)$中心对称. $\blacksquare$
+\textcolor[rgb]{0.75,0.17,0.22}{必要性}:
+$y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f(x+a)+f(a-x)=2b$$\Longrightarrow$关于$(a,b)$中心对称. $\blacksquare$
 
     另外也有函数$y=f(x)$的图象关于$x=a$成轴对称的充要条件是函数$y=f(a+x)$为偶函数
 
@@ -203,7 +202,7 @@
         试讨论函数$\displaystyle y=x-\frac{1}{x}$的定义域, 值域, 单调性, 奇偶性, 并画出函数图像.
     \end{boxB}
     这是对勾函数所拓充出的函数, 我个人习惯说是双撇函数.由于$x=0$函数不存在, 定义域为$\{x|x\neq 0\}$而值域是$\mathbb{R}$, $y'=1+\frac{1}{x^2}>0$恒成立, 故函数在$(-\infty ,0)$和$(0,+\infty )$上单调递增;
-        
+
     同时, $\displaystyle f(-x)=-x-\frac{1}{-x}=-x+\frac{1}{x}=-f(x)$为奇函数.
     \begin{figure}[htbp]
         \centering
@@ -220,7 +219,7 @@
 
     如果我一年结算两次, 此时每年的收益率就相应的减为$\displaystyle \frac{r}{2}$, 第一期收益的产也被计入为第二期的本金, 因此一年就有$\displaystyle (1+\frac{r}{2})^2$单位的钱.如果一年分三期, 那么操作同样, 一年下来就有$\displaystyle (1+\frac{r}{3})^3$
 
-    但一年分三期是比一年分两期要高的, 如果一年分的期次越高, 总收益$\displaystyle (1+\frac{r}{n})^n$, 也会越高. 但当$n\to \infty$时收益并不会趋于无穷, 它是有界的, 当$r=1$的时候便有$\displaystyle \lim_{x \to \infty} (1+\frac{1}{n} )^n=e$, 还有一般形式$\displaystyle \lim_{x \to \infty} (1+\frac{r}{n} )^n=e^r$. 
+    但一年分三期是比一年分两期要高的, 如果一年分的期次越高, 总收益$\displaystyle (1+\frac{r}{n})^n$, 也会越高. 但当$n\to \infty$时收益并不会趋于无穷, 它是有界的, 当$r=1$的时候便有$\displaystyle \lim_{x \to \infty} (1+\frac{1}{n} )^n=e$, 还有一般形式$\displaystyle \lim_{x \to \infty} (1+\frac{r}{n} )^n=e^r$.
 
     来一波小小的应用:
     \begin{boxB}
@@ -228,72 +227,72 @@
     \end{boxB}
     证明: 由于$\displaystyle \lim_{x \to \infty} (1+\frac{1}{n} )^n=e$, $\displaystyle (1+\frac{1}{n} )^n$的形式可以使用二项式定理, 令$\displaystyle f(n)=(1+\frac{1}{n} )^n$:
     $$
-    f(n)=(1+\frac{1}{n})^n=1+C_n^1\frac{1}{n}+C_n^2\frac{1}{n}+C_n^3\frac{1}{n}+\cdots +C_n^n\frac{1}{n^n}
+        f(n)=(1+\frac{1}{n})^n=1+C_n^1\frac{1}{n}+C_n^2\frac{1}{n}+C_n^3\frac{1}{n}+\cdots +C_n^n\frac{1}{n^n}
     $$
     展开组合式可得:
     $$
-    1+1+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots +\frac{n(n-1)\cdots (n-n+1)}{n!}\frac{1}{n^n}
+        1+1+\frac{n(n-1)}{2!}\frac{1}{n^2}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\frac{n(n-1)(n-2)}{3!}\frac{1}{n^3}+\cdots +\frac{n(n-1)\cdots (n-n+1)}{n!}\frac{1}{n^n}
     $$
     初步化简得:
     $$
-    f(n)=1+1+\frac{1}{2!}(1-\frac{1}{n})+\frac{1}{3!}(1-\frac{1}{n})(1-\frac{2}{n})+\cdots +\frac{1}{n!}(1-\frac{1}{n})(1-\frac{2}{n})(1-\frac{3}{n})\cdots (1-\frac{n-1}{n})
+        f(n)=1+1+\frac{1}{2!}(1-\frac{1}{n})+\frac{1}{3!}(1-\frac{1}{n})(1-\frac{2}{n})+\cdots +\frac{1}{n!}(1-\frac{1}{n})(1-\frac{2}{n})(1-\frac{3}{n})\cdots (1-\frac{n-1}{n})
     $$
     当$n\ge 4$时, $n!=1\times2\times3\times4\times\cdots \times n>n(n-1)$
-    所以: 
+    所以:
     $$
-    f(n)<1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{3\times4}+\frac{1}{4\times5}+\cdots +\frac{1}{n(n-1)}
+        f(n)<1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{3\times4}+\frac{1}{4\times5}+\cdots +\frac{1}{n(n-1)}
     $$
     进一步化简右式:
     $$
-    f(n)<1+1+\frac{1}{1\times2}+\frac{1}{2\times3}+\frac{1}{3\times4}+\frac{1}{4\times5}+\cdots+\frac{1}{n(n-1)}
+        f(n)<1+1+\frac{1}{1\times2}+\frac{1}{2\times3}+\frac{1}{3\times4}+\frac{1}{4\times5}+\cdots+\frac{1}{n(n-1)}
     $$
     右式裂项得:
     $$
-    2+1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\cdots-\frac{1}{n} \le 3
+        2+1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\cdots-\frac{1}{n} \le 3
     $$
     所以$e<3$.$\blacksquare$
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P160, T6}}
     \begin{boxB}
         设$\displaystyle f(x)=\frac{e^x-e^{-x}}{2}$, $\displaystyle g(x)=\frac{e^x+e^{-x}}{2}$, 求证:\par
-    \begin{enumerate}
-        \item $[g(x)]^2-[f(x)]^2=1$
-        \item $f(2x)=2f(x)g(x)$
-        \item $g(2x)=[g(x)]^2+[f(x)]^2$
-    \end{enumerate}
+        \begin{enumerate}
+            \item $[g(x)]^2-[f(x)]^2=1$
+            \item $f(2x)=2f(x)g(x)$
+            \item $g(2x)=[g(x)]^2+[f(x)]^2$
+        \end{enumerate}
     \end{boxB}
-        本题涉及\textcolor[rgb]{0.38,0.11,0.2}{双曲函数}的一些小性质, 其中$\displaystyle \sinh x = \frac{e^x-e^{-x}}{2}$, $\displaystyle \cosh x = \frac{e^x+e^{-x}}{2}$
+    本题涉及\textcolor[rgb]{0.38,0.11,0.2}{双曲函数}的一些小性质, 其中$\displaystyle \sinh x = \frac{e^x-e^{-x}}{2}$, $\displaystyle \cosh x = \frac{e^x+e^{-x}}{2}$
     \begin{enumerate}
         \item $\displaystyle \cosh^2 x-\sinh^2x=(\cosh x+\sinh x)(\cosh x-\sinh x)\\=(\frac{e^x-e^{-x}}{2}+\frac{e^x+e^{-x}}{2})(\frac{e^x-e^{-x}}{2}-\frac{e^x+e^{-x}}{2})=\frac{2e^x}{2}\frac{2e^{-x}}{2}=e^x\cdot \frac{1}{e^x}=1$
         \item $\displaystyle \sinh 2x=\frac{e^{2x}-e^{-2x}}{2}, 2\sinh x \cosh x=2\cdot \frac{e^x-e^{-x}}{2}\cdot \frac{e^x+e^{-x}}{2}=\frac{e^{2x}-e^{-2x}}{2}$
         \item $\displaystyle \cosh 2x=\frac{e^{2x}+e^{-2x}}{2}, \cosh^2x+\sinh^2x=(\frac{e^x-e^{-x}}{2})^2+ (\frac{e^x+e^{-x}}{2})^2\\=\frac{e^{2x}+e^{-2x}}{2}$. $\blacksquare$
     \end{enumerate}
 
-    还有其它性质:$\cosh x$是偶函数, $\sinh x$是奇函数. 
-        
+    还有其它性质:$\cosh x$是偶函数, $\sinh x$是奇函数.
+
     另外还有由\textcolor[rgb]{0.75,0.17,0.22}{基本不等式}可知: $\displaystyle \sinh x=\frac{e^x+e^{-x}}{2} \ge \frac{2\sqrt{e^xe^{-x}}}{2}=1$
 
     \textcolor[rgb]{0.38,0.11,0.2}{回看问题1,$x^2+y^2=1$代表单位圆$x=\cos \theta, y=\sin \theta$, 而$x^2-y^2=1$代表单位双曲线$x=\cosh t, y=\sinh t$.}
-    
+
     \begin{figure}[htbp]    % 常规操作\begin{figure}开头说明插入图片
         % 后面跟着的[htbp]是图片在文档中放置的位置, 也称为浮动体的位置, 关于这个我们后面的文章会聊聊, 现在不管, 照写就是了
-          \centering            % 前面说过, 图片放置在中间
-          \subfloat[双曲正弦函数$y=\sinh x$]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
-          {
-              \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/sinhx.png}
-              % \label{}命令为每个子图添加标签, 方便在正文中引用. 如果你不需要引用的话, 也可以不加这个命令, 写法在下面有: 
-              % \label{}命令的{}内第一个{}中的内容fig:subfig1就是你插入的这张子图的标签, 注意每个标签都不能一样, 要用合适的编号去区分, 比如1, 2, 3......
-              % \label{}命令中{}内\includegraphics[]{}就是真正插入图片的命令, []中的是图片的一些参数, {}就是图片的相对路径
-              % width=0.4\textwidth 就是设置图片的大小, 这里设置的是文档宽度(\textwidth)的0.4倍, 在设置时注意不要超宽, 不然会报错, 大家多设置几个数尝试一下就能理解了
-          }
-          \subfloat[双曲余弦函数$y=\cosh x$]
-          {
-              \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/coshx.png}
-          }
-          \caption{双曲函数}    % 整个图片的说明, 注释写在{}内
-          \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
-        \end{figure}
+        \centering            % 前面说过, 图片放置在中间
+        \subfloat[双曲正弦函数$y=\sinh x$]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
+        {
+            \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/sinhx.png}
+            % \label{}命令为每个子图添加标签, 方便在正文中引用. 如果你不需要引用的话, 也可以不加这个命令, 写法在下面有: 
+            % \label{}命令的{}内第一个{}中的内容fig:subfig1就是你插入的这张子图的标签, 注意每个标签都不能一样, 要用合适的编号去区分, 比如1, 2, 3......
+            % \label{}命令中{}内\includegraphics[]{}就是真正插入图片的命令, []中的是图片的一些参数, {}就是图片的相对路径
+            % width=0.4\textwidth 就是设置图片的大小, 这里设置的是文档宽度(\textwidth)的0.4倍, 在设置时注意不要超宽, 不然会报错, 大家多设置几个数尝试一下就能理解了
+        }
+        \subfloat[双曲余弦函数$y=\cosh x$]
+        {
+            \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/coshx.png}
+        }
+        \caption{双曲函数}    % 整个图片的说明, 注释写在{}内
+        \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
+    \end{figure}
 
-        通过双曲三角函数一些非常有趣的结论, 我们是不是可以看到它们很像三角函数呢? 那它和三角函数有什么更本质的关系呢? 大家感兴趣的话可以自行去通过复数领域的欧拉公式拓展相关的知识, 并得到一些新的感想与体会.
+    通过双曲三角函数一些非常有趣的结论, 我们是不是可以看到它们很像三角函数呢? 那它和三角函数有什么更本质的关系呢? 大家感兴趣的话可以自行去通过复数领域的欧拉公式拓展相关的知识, 并得到一些新的感想与体会.
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P225例8, P226 T4, 5}}
     \begin{boxB}
         \begin{enumerate}
@@ -310,15 +309,15 @@
 
     和差化积的另外一种证法(哔哩哔哩-早仓雅提供):
     $$
-    \sin \theta + \sin \varphi =\sin \left( \frac{\theta+\varphi}{2}+ \frac{\theta -\varphi}{2} \right)+\sin \left( \frac{\theta+\varphi}{2}- \frac{\theta -\varphi}{2} \right)
+        \sin \theta + \sin \varphi =\sin \left( \frac{\theta+\varphi}{2}+ \frac{\theta -\varphi}{2} \right)+\sin \left( \frac{\theta+\varphi}{2}- \frac{\theta -\varphi}{2} \right)
     $$
     展开正弦公式可原式得到:
     $$
-    \left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}+\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)+\left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}-\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)
+        \left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}+\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)+\left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}-\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)
     $$
     化简可得
     $$
-    \sin \theta + \sin \varphi = 2\sin\frac{\theta+\varphi}{2}\cos\frac{\theta-\varphi}{2}.\blacksquare
+        \sin \theta + \sin \varphi = 2\sin\frac{\theta+\varphi}{2}\cos\frac{\theta-\varphi}{2}.\blacksquare
     $$
     其它的\textcolor[rgb]{0.38,0.11,0.2}{积化和差}:
     \begin{enumerate}
@@ -336,25 +335,25 @@
     \end{enumerate}
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P250 阅读与思考}}
-    
+
     \begin{center}
         振幅, 周期, 频率, 相位
     \end{center}
 
-    人体就是一个包合各种周期运动的生物体, 医学上把周期为24小时的生理运动称为中周期运动, 如血压, 血糖浓度的变化; 小于24小时的叫短周期运动,  如心跳, 脉搏每分50$\sim$70次, 呼吸每分16$\sim$24次; 大于24小时的叫长周期运动, 如人的情绪, 休力, 智力等. 
-    
+    人体就是一个包合各种周期运动的生物体, 医学上把周期为24小时的生理运动称为中周期运动, 如血压, 血糖浓度的变化; 小于24小时的叫短周期运动,  如心跳, 脉搏每分50$\sim$70次, 呼吸每分16$\sim$24次; 大于24小时的叫长周期运动, 如人的情绪, 休力, 智力等.
+
     声音中也包含着正弦函数, 声音是由于物体的振动产生的能引起听觉的波. 每一个音都是由纯音合成的, 纯音的数学模型是函数 $y=A\sin \omega t$有四要素:  音调, 响度, 音长和音色, 这都与正弦函数的参数有关, 响度与振幅有关, 即与 声波的能量有关, 振幅越大, 响度越大, 音长也与振幅有关, 声音消失过程是由 于声波在传播过程中受阻尼振动, 系统的机械能随时间逐渐减小, 振动的振幅也 逐渐减小, 音调与声波的振动频率是有关的, 频率低的声音低沉, 频率高的声音尖
     利.像我们平时听到的乐音不只是一个音在响, 而是许多个音的结合, 称为复合音.  复合音的产生是因为发声体在全段振动, 产生频率为/的基音的同时, 其各部分,  如二分之一, 三分之一, 四分之一部分也在振动, 产生的频率恰好是全段振动频率的倍数, 如2$f$, 3$f$, 4$f$等.这些音叫谐音, 因为其振幅较小, 我们一般不易单独听出来所以我们听到的声音的函数是$\displaystyle y=\sin x+\frac{1}{2}\sin 2x+\frac{1}{3}\sin 3x+\frac{1}{4}\sin 4x+\cdots$
 
     音色一般是由基音和谐音的综合作用所决定的, 不同乐器, 不同人发出的音调可以相同, 但音色不同, 人们由此分辨出不同的声音.
-    
+
     周期函数产生了美妙的音乐!
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P256, T26}}
     英国数学家泰勒发现了如下公式\textcolor[rgb]{0.38,0.11,0.2}{(泰勒展开)}:
     $$
-    \sin x = x - \frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots,
-    \cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^36}{6!}+\cdots
+        \sin x = x - \frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots,
+        \cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^36}{6!}+\cdots
     $$
 
     其中$n!=1\times2\times3\times\cdots\times n$
@@ -389,7 +388,7 @@
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P9}}
     \begin{boxB}
         证明\textcolor[rgb]{0.38,0.11,0.2}{绝对值三角不等式}: $$
-        ||\overrightarrow{a}|-|\overrightarrow{b}||\le|\overrightarrow{a}+\overrightarrow{b}|\le|\overrightarrow{a}|+|\overrightarrow{b}|
+            ||\overrightarrow{a}|-|\overrightarrow{b}||\le|\overrightarrow{a}+\overrightarrow{b}|\le|\overrightarrow{a}|+|\overrightarrow{b}|
         $$
     \end{boxB}
 
@@ -400,7 +399,7 @@
         \caption{向量证明}
     \end{figure}
 
-    $\displaystyle |\overrightarrow{a}+\overrightarrow{b}|$可表示这条对角线的长度, 而$|\overrightarrow{a}|+|\overrightarrow{b}|$可表示$\overrightarrow{a}$与$\overrightarrow{b}$同向时的长度, $|\overrightarrow{a}|-|\overrightarrow{b}|$为$\overrightarrow{a}$与$\overrightarrow{b}$反向时候的长度.
+$\displaystyle |\overrightarrow{a}+\overrightarrow{b}|$可表示这条对角线的长度, 而$|\overrightarrow{a}|+|\overrightarrow{b}|$可表示$\overrightarrow{a}$与$\overrightarrow{b}$同向时的长度, $|\overrightarrow{a}|-|\overrightarrow{b}|$为$\overrightarrow{a}$与$\overrightarrow{b}$反向时候的长度.
 
     在$|\overrightarrow{a}|+|\overrightarrow{b}|$构成三角形时\textcolor[rgb]{0.75,0.17,0.22}{第三边小于两边之和且大于两边之差}, 当面仅当两尚量同向或者两向量中存在0向量的取到右边等号, 当且仅当两向量异号或者两向量存在0向量时取到左边等号.$\blacksquare$
 
@@ -419,378 +418,378 @@
     然后如图 5.b 操作即可:
     \begin{figure}[htbp]    % 常规操作\begin{figure}开头说明插入图片
         % 后面跟着的[htbp]是图片在文档中放置的位置, 也称为浮动体的位置, 关于这个我们后面的文章会聊聊, 现在不管, 照写就是了
-          \centering            % 前面说过, 图片放置在中间
-          \subfloat[书本图]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
-          {
-              \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/equal_line.png}
-              % \label{}命令为每个子图添加标签, 方便在正文中引用. 如果你不需要引用的话, 也可以不加这个命令, 写法在下面有: 
-              % \label{}命令的{}内第一个{}中的内容fig:subfig1就是你插入的这张子图的标签, 注意每个标签都不能一样, 要用合适的编号去区分, 比如1, 2, 3......
-              % \label{}命令中{}内\includegraphics[]{}就是真正插入图片的命令, []中的是图片的一些参数, {}就是图片的相对路径
-              % width=0.4\textwidth 就是设置图片的大小, 这里设置的是文档宽度(\textwidth)的0.4倍, 在设置时注意不要超宽, 不然会报错, 大家多设置几个数尝试一下就能理解了
-          }
-          \subfloat[倍率等和线图]
-          {
-              \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/eq_line_2.png}
-          }
-          \caption{等和线定理}    % 整个图片的说明, 注释写在{}内
-          \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
-        \end{figure}
+        \centering            % 前面说过, 图片放置在中间
+        \subfloat[书本图]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
+        {
+            \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/equal_line.png}
+            % \label{}命令为每个子图添加标签, 方便在正文中引用. 如果你不需要引用的话, 也可以不加这个命令, 写法在下面有: 
+            % \label{}命令的{}内第一个{}中的内容fig:subfig1就是你插入的这张子图的标签, 注意每个标签都不能一样, 要用合适的编号去区分, 比如1, 2, 3......
+            % \label{}命令中{}内\includegraphics[]{}就是真正插入图片的命令, []中的是图片的一些参数, {}就是图片的相对路径
+            % width=0.4\textwidth 就是设置图片的大小, 这里设置的是文档宽度(\textwidth)的0.4倍, 在设置时注意不要超宽, 不然会报错, 大家多设置几个数尝试一下就能理解了
+        }
+        \subfloat[倍率等和线图]
+        {
+            \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/eq_line_2.png}
+        }
+        \caption{等和线定理}    % 整个图片的说明, 注释写在{}内
+        \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
+    \end{figure}
 
-        做题步骤遵循以下步骤:
-        \begin{enumerate}
-            \item 找到它们所在位置;
-            \item 在$P$点上做$AB$的平行线;
-            \item 根据相似可得$\displaystyle x=\frac{OD}{OC}$
-        \end{enumerate}
+    做题步骤遵循以下步骤:
+    \begin{enumerate}
+        \item 找到它们所在位置;
+        \item 在$P$点上做$AB$的平行线;
+        \item 根据相似可得$\displaystyle x=\frac{OD}{OC}$
+    \end{enumerate}
 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P33, 探究}}
-        
-        \begin{boxB}
-            定比分点公式
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P33, 探究}}
 
-            线段$P_1P_2$的端点$P_1P_2$的坐标分别为$(x_1,y_1)$, $(x_2,y_2)$, $P$是直线$P_1,P_2$上的一点, 当$P_1P_2=\varphi P_1P_2$时, 求点$P$的坐标.
-        \end{boxB}
-        设$P$点坐标$(x,y)$, 则有$$\overrightarrow{P_1P}=\varphi \overrightarrow{PP_2}\Longrightarrow (x-x_1,y-y_1)=\varphi(x_2-x, y_2-y)$$
+    \begin{boxB}
+        定比分点公式
 
-        则有两式: $$x-x_1=\varphi (x_2-x),y-y_1=\varphi (y_2-y)$$
+        线段$P_1P_2$的端点$P_1P_2$的坐标分别为$(x_1,y_1)$, $(x_2,y_2)$, $P$是直线$P_1,P_2$上的一点, 当$P_1P_2=\varphi P_1P_2$时, 求点$P$的坐标.
+    \end{boxB}
+    设$P$点坐标$(x,y)$, 则有$$\overrightarrow{P_1P}=\varphi \overrightarrow{PP_2}\Longrightarrow (x-x_1,y-y_1)=\varphi(x_2-x, y_2-y)$$
 
-        解得:$$x=\frac{x_1+\varphi x_2}{1+\varphi},y=\frac{y_2+\varphi y_2}{1+\varphi}$$
-        
-        故$\displaystyle P(\frac{x_1+\varphi x_2}{1+\varphi},\frac{y_1+\varphi y_2}{1+\varphi})$. $\blacksquare$
+    则有两式: $$x-x_1=\varphi (x_2-x),y-y_1=\varphi (y_2-y)$$
 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P37, T16}}
-        \begin{boxB}
-            用向量方法证明: 对于任意的$a,b,c,d \in \mathbb{R}$恒有不等式$$(ac+bd)^2\le(a^2+b^2)(c^2+d^2)$$
-            当且仅当$\displaystyle \frac{a}{c}=\frac{b}{d}$等号成立.
-        \end{boxB}
+    解得:$$x=\frac{x_1+\varphi x_2}{1+\varphi},y=\frac{y_2+\varphi y_2}{1+\varphi}$$
 
-        本题实际上是证明\textcolor[rgb]{0.38,0.11,0.2}{二维的柯西不等式}
+    故$\displaystyle P(\frac{x_1+\varphi x_2}{1+\varphi},\frac{y_1+\varphi y_2}{1+\varphi})$. $\blacksquare$
 
-        证明: 构造向量$\overrightarrow{a}=(a,b),\overrightarrow{b}=(c,d)$其夹角为$\theta$由$\cos \theta \in [-1,1]$可知$\cos ^2 \theta \le 1$则有$$\cos ^2 \theta=\left (\frac{\overrightarrow{a}\cdot \overrightarrow{b}}{|\overrightarrow{a}|\cdot |\overrightarrow{b}|}\right ) ^2=\left ( \frac{ac+bd}{\sqrt{a^2+b^2}\cdot \sqrt{c^2+d^2}} \right )^2 \le 1$$
-        解得$$(ac+bd)^2 \le (a^2+b^2)(c^2+d^2)$$
-        由\textcolor[rgb]{0.38,0.11,0.2}{柯西不等式}可引申出\textcolor[rgb]{0.38,0.11,0.2}{二维的权方和不等式}$$\frac{x_1^2}{y_1}+\frac{x_2^2}{y_2}\ge \frac{(x_1+x_2)^2}{y_1+y_2}$$
-        令$\displaystyle a^2=\frac{x_1^2}{y_1},b^2=\frac{x_2^2}{y_2},c^2=y_1,d^2=y_2$
-        $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\ge \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )^2=(x_1+x_2)^2$$
-        当且仅当$\displaystyle \frac{x_1}{y_1}=\frac{x_2}{y_2}$等号成立.$\blacksquare$
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P39, 例2}}
-        已知图5有$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC},\overrightarrow{DB}=\overrightarrow{AB}-\overrightarrow{BC}$, 则有$$\overrightarrow{AC}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2+2\overrightarrow{AB}\cdot \overrightarrow{BC},\overrightarrow{DB}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2-2\overrightarrow{AB}\cdot \overrightarrow{BC}$$
-        \textcolor[rgb]{0.75,0.17,0.22}{两式相加}有$$AC^2+BD^2=2(AB^2+AD^2)$$
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.5\textwidth]{img/PolarizationIdentity.png}
-            \caption{平行四边形性质}
-        \end{figure}
-        此为平行四边形的性质.
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P37, T16}}
+    \begin{boxB}
+        用向量方法证明: 对于任意的$a,b,c,d \in \mathbb{R}$恒有不等式$$(ac+bd)^2\le(a^2+b^2)(c^2+d^2)$$
+        当且仅当$\displaystyle \frac{a}{c}=\frac{b}{d}$等号成立.
+    \end{boxB}
 
-        类似操作即可得到\textcolor[rgb]{0.38,0.11,0.2}{极化恒等式}: 
+    本题实际上是证明\textcolor[rgb]{0.38,0.11,0.2}{二维的柯西不等式}
 
-        如图6, 在$\triangle ABC$中, $D$为$BC$求证$\overrightarrow{AB}\cdot \overrightarrow{BC}=|AD|^2-|BD|^2$
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.5\textwidth]{img/PolarizationIdentity_p.png}
-            \caption{极化恒等式}
-        \end{figure}
-        \begin{equation}
-            \overrightarrow{AD}=\frac{1}{2} \left ( \overrightarrow{AB}+\overrightarrow{AC} \right )\Longrightarrow |\overrightarrow{AD}|^2=\frac{1}{4}\left ( \overrightarrow{AB}^2+\overrightarrow{AC}^2+2\overrightarrow{AB}\cdot \overrightarrow{AC} \right )
-        \end{equation}
+    证明: 构造向量$\overrightarrow{a}=(a,b),\overrightarrow{b}=(c,d)$其夹角为$\theta$由$\cos \theta \in [-1,1]$可知$\cos ^2 \theta \le 1$则有$$\cos ^2 \theta=\left (\frac{\overrightarrow{a}\cdot \overrightarrow{b}}{|\overrightarrow{a}|\cdot |\overrightarrow{b}|}\right ) ^2=\left ( \frac{ac+bd}{\sqrt{a^2+b^2}\cdot \sqrt{c^2+d^2}} \right )^2 \le 1$$
+    解得$$(ac+bd)^2 \le (a^2+b^2)(c^2+d^2)$$
+    由\textcolor[rgb]{0.38,0.11,0.2}{柯西不等式}可引申出\textcolor[rgb]{0.38,0.11,0.2}{二维的权方和不等式}$$\frac{x_1^2}{y_1}+\frac{x_2^2}{y_2}\ge \frac{(x_1+x_2)^2}{y_1+y_2}$$
+    令$\displaystyle a^2=\frac{x_1^2}{y_1},b^2=\frac{x_2^2}{y_2},c^2=y_1,d^2=y_2$
+    $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\ge \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )^2=(x_1+x_2)^2$$
+    当且仅当$\displaystyle \frac{x_1}{y_1}=\frac{x_2}{y_2}$等号成立.$\blacksquare$
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P39, 例2}}
+    已知图5有$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC},\overrightarrow{DB}=\overrightarrow{AB}-\overrightarrow{BC}$, 则有$$\overrightarrow{AC}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2+2\overrightarrow{AB}\cdot \overrightarrow{BC},\overrightarrow{DB}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2-2\overrightarrow{AB}\cdot \overrightarrow{BC}$$
+    \textcolor[rgb]{0.75,0.17,0.22}{两式相加}有$$AC^2+BD^2=2(AB^2+AD^2)$$
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/PolarizationIdentity.png}
+        \caption{平行四边形性质}
+    \end{figure}
+    此为平行四边形的性质.
 
-        \begin{equation}
-            \overrightarrow{DB}=\frac{1}{2} \left ( \overrightarrow{AB}+\overrightarrow{AC} \right )\Longrightarrow |\overrightarrow{DB}|^2=\frac{1}{4}\left ( \overrightarrow{AB}^2-\overrightarrow{AC}^2+2\overrightarrow{AB}\cdot \overrightarrow{AC} \right )
-        \end{equation}
+    类似操作即可得到\textcolor[rgb]{0.38,0.11,0.2}{极化恒等式}:
 
-        (1) - (2) 得:
-        $$
+    如图6, 在$\triangle ABC$中, $D$为$BC$求证$\overrightarrow{AB}\cdot \overrightarrow{BC}=|AD|^2-|BD|^2$
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/PolarizationIdentity_p.png}
+        \caption{极化恒等式}
+    \end{figure}
+    \begin{equation}
+        \overrightarrow{AD}=\frac{1}{2} \left ( \overrightarrow{AB}+\overrightarrow{AC} \right )\Longrightarrow |\overrightarrow{AD}|^2=\frac{1}{4}\left ( \overrightarrow{AB}^2+\overrightarrow{AC}^2+2\overrightarrow{AB}\cdot \overrightarrow{AC} \right )
+    \end{equation}
+
+    \begin{equation}
+        \overrightarrow{DB}=\frac{1}{2} \left ( \overrightarrow{AB}+\overrightarrow{AC} \right )\Longrightarrow |\overrightarrow{DB}|^2=\frac{1}{4}\left ( \overrightarrow{AB}^2-\overrightarrow{AC}^2+2\overrightarrow{AB}\cdot \overrightarrow{AC} \right )
+    \end{equation}
+
+    (1) - (2) 得:
+    $$
         \overrightarrow{AB}\cdot \overrightarrow{AC}=|AD|^2-|BD|^2
-        $$
-        证毕.$\blacksquare$
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P54, T20; P55$\sim$56}}
-        \begin{boxB}
-            证明: \textcolor[rgb]{0.38,0.11,0.2}{海伦公式}
-            $$S_{\triangle ABC}=\sqrt{p(p-a)(p-b)(p-c)},p=\frac{a+b+c}{2}$$
-        \end{boxB}
-        由余弦定理得:
-        $$\cos C=\frac{a^2+b^2-c^2}{2ab}$$
-        由勾股定理得:
-        $$\sin C = \sqrt{1-\cos^2 C}$$
-        则$S_{\triangle ABC}$可表示为:
-        $$\frac{1}{2}ab\sin C=\frac{1}{2}ab\sqrt{1-\left( \frac{a^2+b^2-c^2}{2ab}\right)^2}=\frac{1}{4}\sqrt{\left(2ab\right)^2-\left( a^2+b^2-c^2 \right)^2}$$
-        将上式进一步化简:
-        $$\frac{1}{4}\sqrt{\left( 2ab+a^2+b^2-c^2 \right)\left( 2ab-a^2-b^2+c^2 \right)}$$
-        最后得到:
-        $$\frac{1}{4}\sqrt{\left( a+b+c \right)\left( b+c-a \right)\left( c+a-b \right)\left( a+b-c \right)}$$
-        又$\displaystyle p=\frac{a+b+c}{2}$对其变形有$\displaystyle \frac{1}{2}(b+c-a)=p-a,\frac{1}{2}(a+c-b)=p-b,\frac{1}{2}(a+b-c)=p-c$
-        可得到海伦公式:
-        $$
+    $$
+    证毕.$\blacksquare$
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P54, T20; P55$\sim$56}}
+    \begin{boxB}
+        证明: \textcolor[rgb]{0.38,0.11,0.2}{海伦公式}
+        $$S_{\triangle ABC}=\sqrt{p(p-a)(p-b)(p-c)},p=\frac{a+b+c}{2}$$
+    \end{boxB}
+    由余弦定理得:
+    $$\cos C=\frac{a^2+b^2-c^2}{2ab}$$
+    由勾股定理得:
+    $$\sin C = \sqrt{1-\cos^2 C}$$
+    则$S_{\triangle ABC}$可表示为:
+    $$\frac{1}{2}ab\sin C=\frac{1}{2}ab\sqrt{1-\left( \frac{a^2+b^2-c^2}{2ab}\right)^2}=\frac{1}{4}\sqrt{\left(2ab\right)^2-\left( a^2+b^2-c^2 \right)^2}$$
+    将上式进一步化简:
+    $$\frac{1}{4}\sqrt{\left( 2ab+a^2+b^2-c^2 \right)\left( 2ab-a^2-b^2+c^2 \right)}$$
+    最后得到:
+    $$\frac{1}{4}\sqrt{\left( a+b+c \right)\left( b+c-a \right)\left( c+a-b \right)\left( a+b-c \right)}$$
+    又$\displaystyle p=\frac{a+b+c}{2}$对其变形有$\displaystyle \frac{1}{2}(b+c-a)=p-a,\frac{1}{2}(a+c-b)=p-b,\frac{1}{2}(a+b-c)=p-c$
+    可得到海伦公式:
+    $$
         S_{\triangle ABC}=\sqrt{p(p-a)(p-b)(p-c)},p=\frac{a+b+c}{2} .\blacksquare
-        $$
-        
-        与其等价的为\textcolor[rgb]{0.38,0.11,0.2}{秦九韶公式}: 
-        $$S_{\triangle ABC}=\sqrt{\frac{1}{4}\left[ a^2c^2-\left( \frac{c^2+a^2-b^2}{2} \right)^2 \right]}$$
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P82}}
-        这里涉及了\textcolor[rgb]{0.38,0.11,0.2}{代数基本定理}与\textcolor[rgb]{0.38,0.11,0.2}{较高次方程的韦达定理}:
-        \begin{boxB}
-            代数基本定理: 任何一个一元复系数多项式方程都至少有一个复数根
-        \end{boxB}
-        关于较高次方程的韦达定理的基本事实是: 任何一个一元复系数多项式方程均可表示为$X-x_n$的形式, 下面就是式子的描述:
-        $$a_nX^n+a_{n-1}X^{n-1}+a_{n-2}X^{n-2}+a_1X=a_n(X-x_1)(X-x_2)(X-x_3)\cdots (X-x_n)$$
-        简写为:
-        $$\sum_{i=1}^{n} a_nX^{n}=a_n\prod_{i=1}^{n}\left ( X-x_n \right ) $$
+    $$
 
-        简单引入: 一元三次方程$a_3x^3+a_2x^2+a_1x+a_0=0,(a_3\neq0)$在复数集$\mathbb{C}$的根为$x_1,x_2,x_3$, 对其变形可得$a_3(x-x_1)(x-x_2)(x-x_3)=0$, 则有$a_3x^3-a_3(x_1+x_2+x_3)x^2+a_3(x_1x_2+x_2x_3+x_1x_3)x-a_3x_1x_2x_3=0$
+    与其等价的为\textcolor[rgb]{0.38,0.11,0.2}{秦九韶公式}:
+    $$S_{\triangle ABC}=\sqrt{\frac{1}{4}\left[ a^2c^2-\left( \frac{c^2+a^2-b^2}{2} \right)^2 \right]}$$
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P82}}
+    这里涉及了\textcolor[rgb]{0.38,0.11,0.2}{代数基本定理}与\textcolor[rgb]{0.38,0.11,0.2}{较高次方程的韦达定理}:
+    \begin{boxB}
+        代数基本定理: 任何一个一元复系数多项式方程都至少有一个复数根
+    \end{boxB}
+    关于较高次方程的韦达定理的基本事实是: 任何一个一元复系数多项式方程均可表示为$X-x_n$的形式, 下面就是式子的描述:
+    $$a_nX^n+a_{n-1}X^{n-1}+a_{n-2}X^{n-2}+a_1X=a_n(X-x_1)(X-x_2)(X-x_3)\cdots (X-x_n)$$
+    简写为:
+    $$\sum_{i=1}^{n} a_nX^{n}=a_n\prod_{i=1}^{n}\left ( X-x_n \right ) $$
 
-        \textcolor[rgb]{0.75,0.17,0.22}{对比两个式子}有:
-        $$
-        \left\{\begin{matrix} 
-            \displaystyle x_1+x_2+x_3=-\frac{a_2}{a_3}  \\  
+    简单引入: 一元三次方程$a_3x^3+a_2x^2+a_1x+a_0=0,(a_3\neq0)$在复数集$\mathbb{C}$的根为$x_1,x_2,x_3$, 对其变形可得$a_3(x-x_1)(x-x_2)(x-x_3)=0$, 则有$a_3x^3-a_3(x_1+x_2+x_3)x^2+a_3(x_1x_2+x_2x_3+x_1x_3)x-a_3x_1x_2x_3=0$
+
+    \textcolor[rgb]{0.75,0.17,0.22}{对比两个式子}有:
+    $$
+        \left\{\begin{matrix}
+            \displaystyle x_1+x_2+x_3=-\frac{a_2}{a_3}         \\
             \displaystyle x_1x_2+x_2x_3+x_1x_3=\frac{a_1}{a_3} \\
-            \displaystyle x_1x_2x_3=-\frac{a_0}{a_3} 
-          \end{matrix}\right. 
-        $$
-        对于一元四次方程$a_4x^4+a_3x^3+a_2x^2+a_1x^1+a_0=0,\left( x_4 \neq 0 \right)$也是同样的操作:
-        $$
-        \left\{\begin{matrix} 
-            \displaystyle x_1+x_2+x_3+x_4=-\frac{a_3}{a_4} \\  
+            \displaystyle x_1x_2x_3=-\frac{a_0}{a_3}
+        \end{matrix}\right.
+    $$
+    对于一元四次方程$a_4x^4+a_3x^3+a_2x^2+a_1x^1+a_0=0,\left( x_4 \neq 0 \right)$也是同样的操作:
+    $$
+        \left\{\begin{matrix}
+            \displaystyle x_1+x_2+x_3+x_4=-\frac{a_3}{a_4}                          \\
             \displaystyle x_1x_2+x_1x_3+x_1x_4+x_2x_3+x_2x_4+x_3x_4=\frac{a_2}{a_4} \\
-            \displaystyle x_1x_2x_3+x_1x_2x_4+x_1x_3x_4+x_2x_3x_4=-\frac{a_1}{a_4} \\
-            \displaystyle x_1x_2x_3x_4=\frac{a_0}{a_4} 
-          \end{matrix}\right. 
-        $$
+            \displaystyle x_1x_2x_3+x_1x_2x_4+x_1x_3x_4+x_2x_3x_4=-\frac{a_1}{a_4}  \\
+            \displaystyle x_1x_2x_3x_4=\frac{a_0}{a_4}
+        \end{matrix}\right.
+    $$
 
-        事实上对于任何一个一元 n 次实(或复)系数多项式$P(x)$, 使得$P(x)=a_nx^n  + a_{n-1}x^{n-1} +\cdots + a_1 x+ a_0,a_n\neq 0$
-        则根${\displaystyle \{x_{i}\}}$和系数${\displaystyle \{a_{j}\}}$之间满足关系式:
-        $$
-        \begin{cases} x_1 + x_2 + \dots + x_{n-1} + x_n = -\dfrac{a_{n-1}}{a_{n}} \\ 
+    事实上对于任何一个一元 n 次实(或复)系数多项式$P(x)$, 使得$P(x)=a_nx^n  + a_{n-1}x^{n-1} +\cdots + a_1 x+ a_0,a_n\neq 0$
+    则根${\displaystyle \{x_{i}\}}$和系数${\displaystyle \{a_{j}\}}$之间满足关系式:
+    $$
+        \begin{cases} x_1 + x_2 + \dots + x_{n-1} + x_n = -\dfrac{a_{n-1}}{a_{n}}                                                           \\
             (x_1 x_2 + x_1 x_3+\cdots + x_1 x_n) + (x_2x_3 + x_2x_4+\cdots + x_2x_n)+\cdots + x_{n-1}x_n = \dfrac{a_{n-2}}{a_{n}} \\
-            {} \quad \vdots \\ x_1 x_2 \dots x_n = (-1)^n \dfrac{a_0}{a_n}
+            {} \quad \vdots                                                                                                       \\ x_1 x_2 \dots x_n = (-1)^n \dfrac{a_0}{a_n}
         \end{cases}
-        $$
-        等价的说, 对任何$k=1,2,3,\cdots,n$系数比${\displaystyle {\frac {a_{n-k}}{a_{n}}}}$是所有任取 $k$ 个根的乘积的和的${\displaystyle (-1)^{k}}$倍, 即:
-        $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} x_{i_1}x_{i_2}\cdots x_{i_k}=(-1)^k\frac{a_{n-k}}{a_n}$$
-        或:
-        $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} \left(\prod_{j = 1}^k x_{i_j}\right)=(-1)^k\frac{a_{n-k}}{a_n}$$
-        其中 $i_1 < i_2 < \cdots < i_k$< 是要让所有的根的组合都恰好出现一次. 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P91}}
-        \begin{boxB}
-            棣莫弗公式:对任意实数${\displaystyle x}$和整数${\displaystyle n}$, 下列性质成立: $$( \cos (x) + i \sin (x) )^n = \cos (nx) + i \sin (nx)$$
-        \end{boxB}
-        举个例子: 对于 ${\displaystyle x=30^{\circ }}$ 和 ${\displaystyle n=2}$, 棣莫弗公式断言 $${\displaystyle \left(\cos(30^{\circ })+i\sin(30^{\circ })\right)^{2}=\cos(2\cdot 30^{\circ })+i\sin(2\cdot 30^{\circ }),}$$相当于$${\displaystyle \left({\frac {\sqrt {3}}{2}}+{\frac {i}{2}}\right)^{2}={\frac {1}{2}}+{\frac {i{\sqrt {3}}}{2}}.}$$
+    $$
+    等价的说, 对任何$k=1,2,3,\cdots,n$系数比${\displaystyle {\frac {a_{n-k}}{a_{n}}}}$是所有任取 $k$ 个根的乘积的和的${\displaystyle (-1)^{k}}$倍, 即:
+    $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} x_{i_1}x_{i_2}\cdots x_{i_k}=(-1)^k\frac{a_{n-k}}{a_n}$$
+    或:
+    $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} \left(\prod_{j = 1}^k x_{i_j}\right)=(-1)^k\frac{a_{n-k}}{a_n}$$
+    其中 $i_1 < i_2 < \cdots < i_k$< 是要让所有的根的组合都恰好出现一次.
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P91}}
+    \begin{boxB}
+        棣莫弗公式:对任意实数${\displaystyle x}$和整数${\displaystyle n}$, 下列性质成立: $$( \cos (x) + i \sin (x) )^n = \cos (nx) + i \sin (nx)$$
+    \end{boxB}
+    举个例子: 对于 ${\displaystyle x=30^{\circ }}$ 和 ${\displaystyle n=2}$, 棣莫弗公式断言 $${\displaystyle \left(\cos(30^{\circ })+i\sin(30^{\circ })\right)^{2}=\cos(2\cdot 30^{\circ })+i\sin(2\cdot 30^{\circ }),}$$相当于$${\displaystyle \left({\frac {\sqrt {3}}{2}}+{\frac {i}{2}}\right)^{2}={\frac {1}{2}}+{\frac {i{\sqrt {3}}}{2}}.}$$
 
-        当$n=k+1$时:
+    当$n=k+1$时:
 
-        ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta +i\sin \theta )^{k}\cdot (\cos \theta +i\sin \theta )\\&=(\cos k\theta +i\sin k\theta )\cdot (\cos \theta +i\sin \theta )\\&=(\cos k\theta \cdot \cos \theta +i\sin k\theta \cdot i\sin \theta )+(\cos k\theta \cdot i\sin \theta +i\sin k\theta \cdot \cos \theta )\\&=(\cos k\theta \cdot \cos \theta -\sin k\theta \cdot \sin \theta )+i(\cos k\theta \cdot \sin \theta +\sin k\theta \cdot \cos \theta )\\&\ {\overset {1}{=}}\cos(k\theta +\theta )+i\sin(k\theta +\theta )\\&\ =\cos[(k+1)\theta ]+i\sin[(k+1)\theta ]\\\end{aligned}}}$
+${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta +i\sin \theta )^{k}\cdot (\cos \theta +i\sin \theta )\\&=(\cos k\theta +i\sin k\theta )\cdot (\cos \theta +i\sin \theta )\\&=(\cos k\theta \cdot \cos \theta +i\sin k\theta \cdot i\sin \theta )+(\cos k\theta \cdot i\sin \theta +i\sin k\theta \cdot \cos \theta )\\&=(\cos k\theta \cdot \cos \theta -\sin k\theta \cdot \sin \theta )+i(\cos k\theta \cdot \sin \theta +\sin k\theta \cdot \cos \theta )\\&\ {\overset {1}{=}}\cos(k\theta +\theta )+i\sin(k\theta +\theta )\\&\ =\cos[(k+1)\theta ]+i\sin[(k+1)\theta ]\\\end{aligned}}}$
 
-        在1处使用了和差角公式.
+    在1处使用了和差角公式.
 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P118}}
-        较直观地稍微体现了球的表面积是体积的导数, 类比利用圆周长求圆面积的做法, 我们依然可以使用细分球面方法来推导球体公式:
-        
-        \begin{figure}[htbp]
-          \centering            % 前面说过, 图片放置在中间
-          \subfloat[细分球面]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
-          {
-              \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/Spherical_Grid.eps}
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P118}}
+    较直观地稍微体现了球的表面积是体积的导数, 类比利用圆周长求圆面积的做法, 我们依然可以使用细分球面方法来推导球体公式:
 
-          }
-          \subfloat[取其中一个四棱锥]
-          {
-              \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/GetOne.png}
-          }
-          \caption{球体公式推导}    % 整个图片的说明, 注释写在{}内
-          \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
-        \end{figure}
+    \begin{figure}[htbp]
+        \centering            % 前面说过, 图片放置在中间
+        \subfloat[细分球面]   % 第一张子图的下标(注意: 注释要写在[]中括号内)
+        {
+            \label{fig:subfig1}\includegraphics[width=0.4\textwidth]{img/Spherical_Grid.eps}
 
-        当n越大, 每个小网格越小时, 每个``小锥体"的底面就越平, ``小锥体"就越近似于棱锥, 其高越近似于球半径$R$. 设$O-ABCD$是其中一个``小锥体", 它的体积是:
-        $$
+        }
+        \subfloat[取其中一个四棱锥]
+        {
+            \label{fig:subfig2}\includegraphics[width=0.4\textwidth]{img/GetOne.png}
+        }
+        \caption{球体公式推导}    % 整个图片的说明, 注释写在{}内
+        \label{fig:subfig_1}            % 整个图片的标签编号, 注意这里跟子图是一样的道理, 标签不能重复 
+    \end{figure}
+
+    当n越大, 每个小网格越小时, 每个``小锥体"的底面就越平, ``小锥体"就越近似于棱锥, 其高越近似于球半径$R$. 设$O-ABCD$是其中一个``小锥体", 它的体积是:
+    $$
         V_{O-ABCD}\approx \frac{1}{3}S_{ABCD}R
-        $$
-        由于球的体积就是这7个``小锥体"的体积之和, 而这7个``小锥体"的底面积之和就是球的表面积. 因此球(Spherical)的体积:
-        $$
+    $$
+    由于球的体积就是这7个``小锥体"的体积之和, 而这7个``小锥体"的底面积之和就是球的表面积. 因此球(Spherical)的体积:
+    $$
         V_{Spherical} = \frac{1}{3}S_{Spherical}R=\frac{1}{3}\times 4\pi R^2\cdot R=\frac{4}{3}\pi R^3
-        $$
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P121}}
-        \textcolor[rgb]{0.38,0.11,0.2}{祖暅原理}: 夹在两个平行平面之间的两个几何体, 被平行于这两个平面的任意平面所截的两个截面的面积总相等, 那么两个几何体的体积相等.
+    $$
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P121}}
+    \textcolor[rgb]{0.38,0.11,0.2}{祖暅原理}: 夹在两个平行平面之间的两个几何体, 被平行于这两个平面的任意平面所截的两个截面的面积总相等, 那么两个几何体的体积相等.
 
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.5\textwidth]{img/Cavalieri_half-ball.svg.png}
-            \caption{圆柱内切球体}
-        \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/Cavalieri_half-ball.svg.png}
+        \caption{圆柱内切球体}
+    \end{figure}
 
-        如图8所示: 从其中一层以垂直表面的高$h$横切半径为$r$的半球体, 根据勾股定理, 半径为${\displaystyle r'={\sqrt {r^{2}-h^{2}}}}$, 所以横切面积是$${\displaystyle \pi \cdot (r')^{2}=\pi \cdot (r^{2}-h^{2})}$$对照立体是个有与半球体相同横切面积和高的立体, 中间有一圆锥体. 高$h$的对照立体环形切面有内圆周$h$及外圆周$r$, 其面积为$${\displaystyle \pi \cdot r^{2}-\pi \cdot h^{2}=\pi \cdot (r^{2}-h^{2})}$$因此两个立体都满足祖暅原理并有相同体积. 对照立体的体积就是圆柱体和圆锥体体积之差, 所以$${\displaystyle \pi \cdot r^{2}\cdot r-{\frac {1}{3}}\cdot \pi \cdot r^{2}\cdot r={\frac {2}{3}}\pi \cdot r^{3}}$$成功利用这条有名的方程计出半球体积, 从而导出球体积公式. 
+    如图8所示: 从其中一层以垂直表面的高$h$横切半径为$r$的半球体, 根据勾股定理, 半径为${\displaystyle r'={\sqrt {r^{2}-h^{2}}}}$, 所以横切面积是$${\displaystyle \pi \cdot (r')^{2}=\pi \cdot (r^{2}-h^{2})}$$对照立体是个有与半球体相同横切面积和高的立体, 中间有一圆锥体. 高$h$的对照立体环形切面有内圆周$h$及外圆周$r$, 其面积为$${\displaystyle \pi \cdot r^{2}-\pi \cdot h^{2}=\pi \cdot (r^{2}-h^{2})}$$因此两个立体都满足祖暅原理并有相同体积. 对照立体的体积就是圆柱体和圆锥体体积之差, 所以$${\displaystyle \pi \cdot r^{2}\cdot r-{\frac {1}{3}}\cdot \pi \cdot r^{2}\cdot r={\frac {2}{3}}\pi \cdot r^{3}}$$成功利用这条有名的方程计出半球体积, 从而导出球体积公式.
 
-        \chapter{选择性必修一}
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P10, T8}}
-        \begin{boxB}
-            用向量方法证明: 在平面内的一条直线, 如果与这个平面的一条斜线在这个平面上的射影垂直, 那么它也与这条斜线垂直.
-        \end{boxB}
-        本题实际上是证明\textcolor[rgb]{0.38,0.11,0.2}{三垂线定理}.
+    \chapter{选择性必修一}
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P10, T8}}
+    \begin{boxB}
+        用向量方法证明: 在平面内的一条直线, 如果与这个平面的一条斜线在这个平面上的射影垂直, 那么它也与这条斜线垂直.
+    \end{boxB}
+    本题实际上是证明\textcolor[rgb]{0.38,0.11,0.2}{三垂线定理}.
 
-        
-        \begin{figure}[htbp]
-            \centering
-            \include{cha/ThreeBotsLine}
-            \caption{三垂线定理}
-        \end{figure}
-        如图9所示: $BO \bot $平面$\alpha$, $CD\bot AO$, 因为$BA \bot $平面$\alpha$, $CD\subset $平面$\alpha$, 所以$$BA\bot CD\Longrightarrow \overrightarrow{BA}\cdot \overrightarrow{CD}=0$$.
-        又有$CD\bot AO$, 所以$\overrightarrow{CD}\cdot \overrightarrow{AO}=0$.
-        又因为$\overrightarrow{BO}=\overrightarrow{BA}+\overrightarrow{AO}$, 可得$$\overrightarrow{CD}\cdot\overrightarrow{BO}=\overrightarrow{CD}\cdot\left( \overrightarrow{BA}+\overrightarrow{AO} \right)$$
-        展开括号表达式可得$$\overrightarrow{CD}\cdot\overrightarrow{BA}+\overrightarrow{CD}\cdot\overrightarrow{AO}=0. \blacksquare$$
-        可以通过此方法配合几何知识来处理二面角的问题.
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P68, P89, T10}}
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.7\textwidth]{img/ArgumentFunctions.eps}
-            \caption{直线的参数方程}
-        \end{figure}
-        \textcolor[rgb]{0.38,0.11,0.2}{直线的参数方程}
 
-        如图10所示: $\overrightarrow{v}=\left( m, n \right)$有$\overrightarrow{PP_0}=t\overrightarrow{v}\Longrightarrow  \left( x-x_0, y-y_0 \right)=t\left( m,n \right)$
+    \begin{figure}[htbp]
+        \centering
+        \include{cha/ThreeBotsLine}
+        \caption{三垂线定理}
+    \end{figure}
+    如图9所示: $BO \bot $平面$\alpha$, $CD\bot AO$, 因为$BA \bot $平面$\alpha$, $CD\subset $平面$\alpha$, 所以$$BA\bot CD\Longrightarrow \overrightarrow{BA}\cdot \overrightarrow{CD}=0$$.
+    又有$CD\bot AO$, 所以$\overrightarrow{CD}\cdot \overrightarrow{AO}=0$.
+    又因为$\overrightarrow{BO}=\overrightarrow{BA}+\overrightarrow{AO}$, 可得$$\overrightarrow{CD}\cdot\overrightarrow{BO}=\overrightarrow{CD}\cdot\left( \overrightarrow{BA}+\overrightarrow{AO} \right)$$
+    展开括号表达式可得$$\overrightarrow{CD}\cdot\overrightarrow{BA}+\overrightarrow{CD}\cdot\overrightarrow{AO}=0. \blacksquare$$
+    可以通过此方法配合几何知识来处理二面角的问题.
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P68, P89, T10}}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/ArgumentFunctions.eps}
+        \caption{直线的参数方程}
+    \end{figure}
+    \textcolor[rgb]{0.38,0.11,0.2}{直线的参数方程}
 
-        其中$(m,n)$的几何意义表示该直线的方向向量.
+    如图10所示: $\overrightarrow{v}=\left( m, n \right)$有$\overrightarrow{PP_0}=t\overrightarrow{v}\Longrightarrow  \left( x-x_0, y-y_0 \right)=t\left( m,n \right)$
 
-        \textcolor[rgb]{0.38,0.11,0.2}{圆的参数方程}
+    其中$(m,n)$的几何意义表示该直线的方向向量.
 
-        已知圆的标准方程形如$$\displaystyle \left( x-a \right)^2+\left( y-b \right)^2=r^2$$
-        将其转化为\textcolor[rgb]{0.75,0.17,0.22}{单位圆}$$\left( \frac{x-a}{r} \right)^2+\left( \frac{y-b}{r} \right)^2=1$$
-        \textcolor[rgb]{0.75,0.17,0.22}{对比勾股定理}$\cos^2\theta +\sin^2\theta=1$有:
-        $$\cos \theta =\frac{x-a}{r},\sin \theta=\frac{y-b}{r}$$
-        解得:$$x=a+r\cos \theta,y=b+r\sin \theta, \blacksquare$$
+    \textcolor[rgb]{0.38,0.11,0.2}{圆的参数方程}
 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P89, T9}}
-        
-        \begin{boxB}
-            已知动点$M$与两个定点$O\left( 0,0 \right),A\left( 3,0 \right)$的距离之比为$\displaystyle \frac{1}{2}$, 求动点$M$的轨迹方程
-        \end{boxB}
+    已知圆的标准方程形如$$\displaystyle \left( x-a \right)^2+\left( y-b \right)^2=r^2$$
+    将其转化为\textcolor[rgb]{0.75,0.17,0.22}{单位圆}$$\left( \frac{x-a}{r} \right)^2+\left( \frac{y-b}{r} \right)^2=1$$
+    \textcolor[rgb]{0.75,0.17,0.22}{对比勾股定理}$\cos^2\theta +\sin^2\theta=1$有:
+    $$\cos \theta =\frac{x-a}{r},\sin \theta=\frac{y-b}{r}$$
+    解得:$$x=a+r\cos \theta,y=b+r\sin \theta, \blacksquare$$
 
-        本题实际上考察著名模型\textcolor[rgb]{0.38,0.11,0.2}{阿氏圆}的相关知识, 下面我们来解决这一道题目.
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P89, T9}}
 
-        设动点$M\left( x,y \right)$, 我们可以得到两条线的距离$$|MO|=\sqrt{x^2+y^2},|MA|=\sqrt{\left( x-3 \right)^2+y^2}$$
-        所以$M$与两个定点的距离之比为$$d=\frac{\sqrt{x^2+y^2}}{\sqrt{\left( x-3 \right)^2+y^2}}=\frac{1}{2}$$
-        将其化简可得$$\left( x+1 \right)^2+y^2=4$$
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=\textwidth]{img/ApollonianCircles.eps}
-            \caption{阿波罗尼斯圆}
-        \end{figure}
+    \begin{boxB}
+        已知动点$M$与两个定点$O\left( 0,0 \right),A\left( 3,0 \right)$的距离之比为$\displaystyle \frac{1}{2}$, 求动点$M$的轨迹方程
+    \end{boxB}
 
-        相关拓展知识:
+    本题实际上考察著名模型\textcolor[rgb]{0.38,0.11,0.2}{阿氏圆}的相关知识, 下面我们来解决这一道题目.
 
-        \begin{enumerate}
-            \item 到两定点的距离之商为定值$(\neq 1)$的点的轨迹是阿氏圆
-            \item 如图11所示: 若$P$到两定点$A$,$B$的距离之商为定值$k(k>0,k\neq1)$若$AB=a$,则其半径为$\displaystyle r=\frac{ac}{\left| k^2-1 \right|}$
-            \item 如果$A,B$关于原点对称, 其中$A(-a,0)B(a,0)$且距离之商为定值$k(k>0,k\neq 1)$则圆心坐标为$\displaystyle \left( \frac{a\left( k^2+1 \right)}{k^2-1},0 \right)$, 半径$\displaystyle r=\frac{2ak}{\left| k^2-1 \right|}$
-        \end{enumerate}
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P89, T15}}
-        此处提及\textcolor[rgb]{0.38,0.11,0.2}{切线方程}和\textcolor[rgb]{0.38,0.11,0.2}{切点弦方程}
-        \begin{boxB}
-            设圆$\displaystyle O:\left( x-a \right)^2+\left( y-b \right)^2=r^2$, 一条直线与圆相切于点$P\left( x_0,y_0 \right)$, 求切线方程.
-        \end{boxB}
+    设动点$M\left( x,y \right)$, 我们可以得到两条线的距离$$|MO|=\sqrt{x^2+y^2},|MA|=\sqrt{\left( x-3 \right)^2+y^2}$$
+    所以$M$与两个定点的距离之比为$$d=\frac{\sqrt{x^2+y^2}}{\sqrt{\left( x-3 \right)^2+y^2}}=\frac{1}{2}$$
+    将其化简可得$$\left( x+1 \right)^2+y^2=4$$
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth]{img/ApollonianCircles.eps}
+        \caption{阿波罗尼斯圆}
+    \end{figure}
 
-        已知\textcolor[rgb]{0.75,0.17,0.22}{切线斜率与$OP$垂直}, 故有$$
+    相关拓展知识:
+
+    \begin{enumerate}
+        \item 到两定点的距离之商为定值$(\neq 1)$的点的轨迹是阿氏圆
+        \item 如图11所示: 若$P$到两定点$A$,$B$的距离之商为定值$k(k>0,k\neq1)$若$AB=a$,则其半径为$\displaystyle r=\frac{ac}{\left| k^2-1 \right|}$
+        \item 如果$A,B$关于原点对称, 其中$A(-a,0)B(a,0)$且距离之商为定值$k(k>0,k\neq 1)$则圆心坐标为$\displaystyle \left( \frac{a\left( k^2+1 \right)}{k^2-1},0 \right)$, 半径$\displaystyle r=\frac{2ak}{\left| k^2-1 \right|}$
+    \end{enumerate}
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P89, T15}}
+    此处提及\textcolor[rgb]{0.38,0.11,0.2}{切线方程}和\textcolor[rgb]{0.38,0.11,0.2}{切点弦方程}
+    \begin{boxB}
+        设圆$\displaystyle O:\left( x-a \right)^2+\left( y-b \right)^2=r^2$, 一条直线与圆相切于点$P\left( x_0,y_0 \right)$, 求切线方程.
+    \end{boxB}
+
+    已知\textcolor[rgb]{0.75,0.17,0.22}{切线斜率与$OP$垂直}, 故有$$
         k\cdot \frac{y_0-b}{x_0-a}-1\Longrightarrow k=-\frac{x_0-a}{y_0-b}
-        $$
-        利用点斜式可写出$$y-y_0=-\frac{x_0-a}{y_0-b}\left( x-x_0 \right)$$
-        整理可得到直线方程$$\left( x_0-a \right)\left( x-a \right)+\left( y_0-b \right)\left( y-b \right)=r^2.\blacksquare$$
+    $$
+    利用点斜式可写出$$y-y_0=-\frac{x_0-a}{y_0-b}\left( x-x_0 \right)$$
+    整理可得到直线方程$$\left( x_0-a \right)\left( x-a \right)+\left( y_0-b \right)\left( y-b \right)=r^2.\blacksquare$$
 
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.8\textwidth]{img/TangentOfCircle.eps}
-            \caption{切点弦}
-        \end{figure}
-        
-        如图12所示: 如何求求切点弦方程$l_{AB}$?
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.8\textwidth]{img/TangentOfCircle.eps}
+        \caption{切点弦}
+    \end{figure}
 
-        设$A(x_1,y_1)$, 则$$l_{AP}:\left( x_1-a \right)\left( x-a \right)+\left( y_1-b \right)\left( y-b \right)=r^2$$
-        设$B(x_2,y_2)$, 则$$l_{BP}:\left( x_2-a \right)\left( x-a \right)+\left( y_2-b \right)\left( y-b \right)=r^2$$
-        此时$A,B$两点均在$l_{AB}$的直线上, 所以利用\textcolor[rgb]{0.75,0.17,0.22}{同构}可得$$l_{AB}=\left( x_0-a \right)\left( x-a \right)+\left( y_0-b \right)\left( y-b \right)=r^2$$
-        %% todo
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 例3; P126, T1}}
-        \begin{boxB}
-            设$A,B$两点分别为$(-a,0),(a,0)$,设$AM,BM$相交于点$M$,且它们斜率之积为$\displaystyle -\frac{b^2}{a^2}$, 求$M$的轨迹方程. 
-        \end{boxB}
+    如图12所示: 如何求求切点弦方程$l_{AB}$?
 
-        \textcolor[rgb]{0.38,0.11,0.2}{圆锥曲线第三定义}
+    设$A(x_1,y_1)$, 则$$l_{AP}:\left( x_1-a \right)\left( x-a \right)+\left( y_1-b \right)\left( y-b \right)=r^2$$
+    设$B(x_2,y_2)$, 则$$l_{BP}:\left( x_2-a \right)\left( x-a \right)+\left( y_2-b \right)\left( y-b \right)=r^2$$
+    此时$A,B$两点均在$l_{AB}$的直线上, 所以利用\textcolor[rgb]{0.75,0.17,0.22}{同构}可得$$l_{AB}=\left( x_0-a \right)\left( x-a \right)+\left( y_0-b \right)\left( y-b \right)=r^2$$
+    %% todo
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 例3; P126, T1}}
+    \begin{boxB}
+        设$A,B$两点分别为$(-a,0),(a,0)$,设$AM,BM$相交于点$M$,且它们斜率之积为$\displaystyle -\frac{b^2}{a^2}$, 求$M$的轨迹方程.
+    \end{boxB}
 
-        设$M(x,y)$, 则$$k_{AM}=\frac{y}{x+a},k_{BM}=\frac{y}{x-a}\Longrightarrow k_{AM}k_{BM}=\frac{y^2}{x^2-a^2}=-\frac{b^2}{a^2}$$
-        化简可得$$a^2y^2=-b^2x^2+a^2b^2\Longrightarrow \frac{a^2}{x^2}+\frac{b^2}{y^2}=1(\mathrm{Remove} (-a,0)(a,0))$$
-        若改为斜率之积$\frac{b^2}{a^2}$, 其它不变, 则有$\displaystyle k_{AM}k_{BM}=\frac{y^2}{x^2-a^2}=\frac{b^2}{a^2}$即可得到$\displaystyle \frac{x^2}{a^2}-\frac{y^2}{b^2}=1$(其中$(-a,0)$与$(a,0)$除去), 由于椭圆$a^2=b^2+c^2$, 双曲线有$c^2=a^2+b^2$, 故可\textcolor[rgb]{0.75,0.17,0.22}{统一为$k_{AM}k_{BM}=e^2-1$}
+    \textcolor[rgb]{0.38,0.11,0.2}{圆锥曲线第三定义}
 
-        更一般的结论, 只要过原点的直线$l$与椭圆或双曲线相交$A,B$两点,$M$为曲线上任意一点, 都满足$k_{AM}k_{Bw}=e^2-1$成立.
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 思考}}
-        此处实际上有涉及\textcolor[rgb]{0.38,0.11,0.2}{仿射变换}.
-        
-        椭圆方程$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$, 此时若\textcolor[rgb]{0.75,0.17,0.22}{把$x$轴缩放$a$倍记作$x'$, $y$轴缩放$b$倍记作$y'$}, 则有$\displaystyle x'=\frac{x}{a},y'=\frac{y}{b}\Longrightarrow x'^2+y'^2=1$.
+    设$M(x,y)$, 则$$k_{AM}=\frac{y}{x+a},k_{BM}=\frac{y}{x-a}\Longrightarrow k_{AM}k_{BM}=\frac{y^2}{x^2-a^2}=-\frac{b^2}{a^2}$$
+    化简可得$$a^2y^2=-b^2x^2+a^2b^2\Longrightarrow \frac{a^2}{x^2}+\frac{b^2}{y^2}=1(\mathrm{Remove} (-a,0)(a,0))$$
+    若改为斜率之积$\frac{b^2}{a^2}$, 其它不变, 则有$\displaystyle k_{AM}k_{BM}=\frac{y^2}{x^2-a^2}=\frac{b^2}{a^2}$即可得到$\displaystyle \frac{x^2}{a^2}-\frac{y^2}{b^2}=1$(其中$(-a,0)$与$(a,0)$除去), 由于椭圆$a^2=b^2+c^2$, 双曲线有$c^2=a^2+b^2$, 故可\textcolor[rgb]{0.75,0.17,0.22}{统一为$k_{AM}k_{BM}=e^2-1$}
 
-        实际上是对整个坐标系进行一个线性变换, 将向量基底$\boldsymbol{e_1}=(1,0),\boldsymbol{e_2}=(0,1)$缩放为$\displaystyle \boldsymbol{e_1'}=(\frac{1}{a},0),\boldsymbol{e_2'}=(0,\frac{1}{b})$
-        
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=\textwidth]{img/AffineTransform.eps}
-            \caption{仿射变换}
-        \end{figure}
+    更一般的结论, 只要过原点的直线$l$与椭圆或双曲线相交$A,B$两点,$M$为曲线上任意一点, 都满足$k_{AM}k_{Bw}=e^2-1$成立.
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 思考}}
+    此处实际上有涉及\textcolor[rgb]{0.38,0.11,0.2}{仿射变换}.
 
-        仿射变换的一些性质:
-        \begin{enumerate}
-            \item 两个共线向量变化前后均共线(相互平行的两条直线变化前后均平行);
-            \item 仿射变换保持共线几点的分比;
-            \item 变换后平面内任意一条直线的斜率变为原来的$\displaystyle \frac{a}{b}$, 面积变为原来的$\displaystyle \frac{1}{ab}$.
-        \end{enumerate}
+    椭圆方程$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$, 此时若\textcolor[rgb]{0.75,0.17,0.22}{把$x$轴缩放$a$倍记作$x'$, $y$轴缩放$b$倍记作$y'$}, 则有$\displaystyle x'=\frac{x}{a},y'=\frac{y}{b}\Longrightarrow x'^2+y'^2=1$.
 
-        大家可以试着用上面的仿射变换证明一下刚刚提及的圆曲第三定义, 需要注意的是, 这一个方法不能用于高考的简答题, 否则你可能会面临只得答案分的风险.
+    实际上是对整个坐标系进行一个线性变换, 将向量基底$\boldsymbol{e_1}=(1,0),\boldsymbol{e_2}=(0,1)$缩放为$\displaystyle \boldsymbol{e_1'}=(\frac{1}{a},0),\boldsymbol{e_2'}=(0,\frac{1}{b})$
 
-        \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 思考, 拓展}}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth]{img/AffineTransform.eps}
+        \caption{仿射变换}
+    \end{figure}
 
-        这一部分感兴趣选读.
+    仿射变换的一些性质:
+    \begin{enumerate}
+        \item 两个共线向量变化前后均共线(相互平行的两条直线变化前后均平行);
+        \item 仿射变换保持共线几点的分比;
+        \item 变换后平面内任意一条直线的斜率变为原来的$\displaystyle \frac{a}{b}$, 面积变为原来的$\displaystyle \frac{1}{ab}$.
+    \end{enumerate}
 
-        上面讲到了椭圆的仿射, 那么同为圆锥曲线, 看上去标准方程结构差不多的双曲线是否可以做到类似的变换来将上面的每一个点映射到圆上呢?
+    大家可以试着用上面的仿射变换证明一下刚刚提及的圆曲第三定义, 需要注意的是, 这一个方法不能用于高考的简答题, 否则你可能会面临只得答案分的风险.
 
-        这就扯到一种复变换叫做 Möbius 变换, 对于复平面上的双曲线, 可以通过某些 Möbius 变换将其映射到单位圆. 这种变换的一般形式是:$$z'=\frac{az+b}{cz+d},ad-bc\neq 0$$
-        
-        在复平面$xOy$中, 任意一个复数可表示为$z=a+bi,a,b\in \mathbb{R}$的形式, 其中$(a,b)$为这个复平面上的点, 因此在复平面上圆的方程为:$$\left| z \right|=r$$
+    \section{\textcolor[rgb]{0.11,0.65,0.52}{P108, 思考, 拓展}}
 
-        有一复数$z_0=a_0+b_0i$在屏幕上的点位于圆上, 那么这个圆的切线方程为$$\mathrm{Re}\left( \bar{z_0}z \right)=r^2$$
+    这一部分感兴趣选读.
 
-        事实上如果将双曲线的 \( y \) 轴变为虚数数轴, 即将原来的实数 \( y \) 替换为纯虚数 \( iy \)(其中 \( i \) 是虚数单位, \( i^2 = -1 \)), 那么双曲线的标准方程会发生变化. 
+    上面讲到了椭圆的仿射, 那么同为圆锥曲线, 看上去标准方程结构差不多的双曲线是否可以做到类似的变换来将上面的每一个点映射到圆上呢?
 
-        考虑标准的双曲线方程: 
-        \[
+    这就扯到一种复变换叫做 Möbius 变换, 对于复平面上的双曲线, 可以通过某些 Möbius 变换将其映射到单位圆. 这种变换的一般形式是:$$z'=\frac{az+b}{cz+d},ad-bc\neq 0$$
+
+    在复平面$xOy$中, 任意一个复数可表示为$z=a+bi,a,b\in \mathbb{R}$的形式, 其中$(a,b)$为这个复平面上的点, 因此在复平面上圆的方程为:$$\left| z \right|=r$$
+
+    有一复数$z_0=a_0+b_0i$在屏幕上的点位于圆上, 那么这个圆的切线方程为$$\mathrm{Re}\left( \bar{z_0}z \right)=r^2$$
+
+    事实上如果将双曲线的 \( y \) 轴变为虚数数轴, 即将原来的实数 \( y \) 替换为纯虚数 \( iy \)(其中 \( i \) 是虚数单位, \( i^2 = -1 \)), 那么双曲线的标准方程会发生变化.
+
+    考虑标准的双曲线方程:
+    \[
         \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
-        \]
-        当将 \( y \) 变为虚数 \( iy \), 方程变为: 
-        \[
+    \]
+    当将 \( y \) 变为虚数 \( iy \), 方程变为:
+    \[
         \frac{x^2}{a^2} - \frac{(iy)^2}{b^2} = 1
-        \]
-        
-        由于 \( (iy)^2 = -y^2 \), 方程变为: 
-        \[
+    \]
+
+    由于 \( (iy)^2 = -y^2 \), 方程变为:
+    \[
         \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
-        \]
-        
-        这个方程其实是一个椭圆的方程, 因此, 当将双曲线的 \( y \) 轴变为虚数轴时, 双曲线的方程变成了椭圆的方程.
+    \]
 
-        在复平面中, 复数 \( z = x + iy \) 由实部 \( x \) 和虚部 \( y \) 表示, 其中 \( x \) 和 \( y \) 分别代表复数的实数部分和虚数部分. 对于圆来说, 方程 \( |z| = r \) 描述的是到原点距离为 \( r \) 的点的集合, 也就是: 
-        \[
+    这个方程其实是一个椭圆的方程, 因此, 当将双曲线的 \( y \) 轴变为虚数轴时, 双曲线的方程变成了椭圆的方程.
+
+    在复平面中, 复数 \( z = x + iy \) 由实部 \( x \) 和虚部 \( y \) 表示, 其中 \( x \) 和 \( y \) 分别代表复数的实数部分和虚数部分. 对于圆来说, 方程 \( |z| = r \) 描述的是到原点距离为 \( r \) 的点的集合, 也就是:
+    \[
         |z| = |x + iy| = \sqrt{x^2 + y^2} = r
-        \]
-        这是一个以原点为中心, 半径为 \( r \) 的圆. 
-
-    现在我们来推导复平面上与双曲线相对应的方程. 双曲线的一个特征是两个焦点, 且对每个点, 其到两个焦点的距离之差的绝对值是一个常数. 在复平面中, 这意味着我们可以将双曲线用类似的距离关系来表示. 
-
-    设复平面上有两个焦点 \( z_1 \) 和 \( z_2 \), 则双曲线可以定义为满足以下条件的点的集合: 
-    \[
-    |z - z_1| - |z - z_2| = \text{常数}
     \]
-    或者为了简化讨论, 可以取绝对值后方程为: 
+    这是一个以原点为中心, 半径为 \( r \) 的圆.
+
+    现在我们来推导复平面上与双曲线相对应的方程. 双曲线的一个特征是两个焦点, 且对每个点, 其到两个焦点的距离之差的绝对值是一个常数. 在复平面中, 这意味着我们可以将双曲线用类似的距离关系来表示.
+
+    设复平面上有两个焦点 \( z_1 \) 和 \( z_2 \), 则双曲线可以定义为满足以下条件的点的集合:
     \[
-    ||z - z_1| - |z - z_2|| = 2a
+        |z - z_1| - |z - z_2| = \text{常数}
     \]
-    其中, \( 2a \) 是双曲线的实轴长度. 
-
-    这个方程表示复平面上到两个焦点 \( z_1 \) 和 \( z_2 \) 的距离差的绝对值为常数的点的集合, 与实平面中双曲线的定义一致. 
-
-    因此, 复平面上的双曲线可以表示为满足以下条件的点的集合: 
+    或者为了简化讨论, 可以取绝对值后方程为:
     \[
-    |z - z_1| - |z - z_2| = \text{常数}
+        ||z - z_1| - |z - z_2|| = 2a
+    \]
+    其中, \( 2a \) 是双曲线的实轴长度.
+
+    这个方程表示复平面上到两个焦点 \( z_1 \) 和 \( z_2 \) 的距离差的绝对值为常数的点的集合, 与实平面中双曲线的定义一致.
+
+    因此, 复平面上的双曲线可以表示为满足以下条件的点的集合:
+    \[
+        |z - z_1| - |z - z_2| = \text{常数}
     \]
     这是复数形式下双曲线的标准表达方式. \cite{complex}
 
@@ -867,7 +866,7 @@
     椭圆和双曲线的光学性质与抛物线不同. 从椭圆的一个焦点发出的光线, 经过椭圆反射后, 反射光线交于椭圆的另一个焦点上从双曲线的一个焦点发出的光线, 经过双曲线反射后, 反射光线是散开的, 它们就好像是从另一个焦点射出的一样. 椭圆, 双曲线的光学性质也被人们广泛地应用于各种设计中.
 
     \chapter{选择性必修二}
-    
+
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P10, P57 T17}}
     \subsection{斐波那契数列引论}
     \textcolor[rgb]{0.38,0.11,0.2}{斐波那契数列}递推公式:$$a_{n+2}=a_n+a_{n+1},a_1=a_2=1$$
@@ -883,13 +882,13 @@
     接下来我们来证明第三个结论:
     $$a_{n+2}=a_{n+1}=a_n\Longrightarrow a_{n+1}=a_{n+2}-a_n$$
     等式两边同乘$a_{n+1}$:$$a_{n+1}^2=a_{n+1}\left( a_{n+2}-a_n \right)=a_{n+1}a_{n+2}-a_{n+1}a_n$$
-    又有:$$\left\{\begin{matrix} 
-        a_2^2=a_3a_2-a_2a_1 \\  
-        a_3^2=a_4a_3-a_3a_2 \\
-        a_4^2=a_5a_4-a_4a_3 \\
-        \cdots \\
-        a_n^2=a_{n+1}a_n-a_{n}a_{n-1}
-      \end{matrix}\right. $$
+    又有:$$\left\{\begin{matrix}
+            a_2^2=a_3a_2-a_2a_1 \\
+            a_3^2=a_4a_3-a_3a_2 \\
+            a_4^2=a_5a_4-a_4a_3 \\
+            \cdots              \\
+            a_n^2=a_{n+1}a_n-a_{n}a_{n-1}
+        \end{matrix}\right. $$
     累加可得$$a_2^2+a_3^2+a_4^2+\cdots+a_n^2=a_3a_2-a_2a_1+a_4a_3-a_3a_2+\cdots+a_{n+1}a_n-a_{n}a_{n-1}$$
     最后化简可得$$a_2^2+a_3^2+a_4^2+\cdots+a_n^2=a_na_{n+1}-a_1a_2,a_1a_2=a_1^2$$
     移项可得$\displaystyle a_1^2+a_2^2+a_3^2+\cdots+a_n^2=a_na_{n+1}. \blacksquare$
@@ -953,12 +952,12 @@
     本题涉及\textcolor[rgb]{0.38,0.11,0.2}{角谷猜想}.
 
     任取一个正整数, 若是奇数, 就将该数乘3再加上1, 若是偶数, 就将该数除以2, 反复进行上述两种运算, 经过有限次步骤后, 必入循环$1\rightarrow 4\rightarrow 2\rightarrow 1$这就是数学史上著名的``冰雹猜想"(角谷猜想)如取正整数$m=6$, 根据上述运算法则得出$6\rightarrow 3\rightarrow 10\rightarrow 5\rightarrow 16\rightarrow 8\rightarrow 4\rightarrow 2\rightarrow 1$, 共需8个步骤变为1(简称为8步``雹程"). 现给出递推关系如下
-    
-    已知数列$\left\{ a_n \right\}$满足$a_1=m,m\in \mathbb{Z}^+$,$\displaystyle a_{n+1}=\left\{\begin{matrix} 
-        \displaystyle \frac{a_n}{2},a_n\in\left \{ x|x=2k,k\in \mathbb{Z}  \right \}    \\  
-        3a_n+1 a_n\in\left \{ x|x=2k-1,k\in \mathbb{Z}  \right \}
-      \end{matrix}\right. $
-    
+
+    已知数列$\left\{ a_n \right\}$满足$a_1=m,m\in \mathbb{Z}^+$,$\displaystyle a_{n+1}=\left\{\begin{matrix}
+    \displaystyle \frac{a_n}{2},a_n\in\left \{ x|x=2k,k\in \mathbb{Z}  \right \} \\
+    3a_n+1 a_n\in\left \{ x|x=2k-1,k\in \mathbb{Z}  \right \}
+\end{matrix}\right. $
+
     (1)当$m=17$, 试确定$a_n=1$需要多少步雹程;
 
     (2)若$a_8=1$, 求$m$所有可能的取值集合.
@@ -967,16 +966,16 @@
 
     (1)17,52,26,13,40,20,10,5,16,8,4,2,1
 
-    (2)从后往前倒推:$$1\rightarrow 2\rightarrow 4\rightarrow 8\rightarrow 16\rightarrow \left\{\begin{matrix} 
-        32\rightarrow 64\rightarrow  \left\{\begin{matrix} 
-        128\rightarrow 256\\  
-        21\rightarrow 42
-      \end{matrix}\right. \\  
-        5\rightarrow 10\rightarrow \left\{\begin{matrix} 
-        3\rightarrow 6\\  
-        2\rightarrow 40
-      \end{matrix}\right. \\  
-      \end{matrix}\right. $$
+    (2)从后往前倒推:$$1\rightarrow 2\rightarrow 4\rightarrow 8\rightarrow 16\rightarrow \left\{\begin{matrix}
+            32\rightarrow 64\rightarrow  \left\{\begin{matrix}
+                                                    128\rightarrow 256 \\
+                                                    21\rightarrow 42
+                                                \end{matrix}\right. \\
+            5\rightarrow 10\rightarrow \left\{\begin{matrix}
+                                                  3\rightarrow 6 \\
+                                                  2\rightarrow 40
+                                              \end{matrix}\right.   \\
+        \end{matrix}\right. $$
     因此$m$的可能集合$m=\left\{ 6,40,42,256 \right\}$
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P65}}
@@ -1004,7 +1003,7 @@
     我们将新求得的点的${\displaystyle x}$坐标命名为${\displaystyle x_{1}}$通常${\displaystyle x_{1}}$会比${\displaystyle x_{0}}$更接近方程${\displaystyle f(x)=0}$的解因此我们现在可以利用${\displaystyle x_{1}}$开始下一轮迭代. 迭代公式可化简为如下所示$${\displaystyle x_{n+1}=x_{n}-{\frac {f(x_{n})}{f'(x_{n})}}}$$
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P87, P99 T13}}
-    
+
     拓展一个\textcolor[rgb]{0.38,0.11,0.2}{三次函数}相关结论.
 
     三次函数$\displaystyle y=ax^3+bx^2+cx+d,(a\neq 0)$的性质:
@@ -1035,7 +1034,7 @@
     此处拓展\textcolor[rgb]{0.38,0.11,0.2}{琴生不等式}和\textcolor[rgb]{0.38,0.11,0.2}{凹凸性}的关系, 由于各种课本对凹凸的概念不同, 故这里均指明是上凸还是下凸, 分别对应英文Convex和Concave.
 
     对于几何性质的定义, 若在封闭图形上任意取2点作线段能够满足线段上的点均在封闭图形内, 我们称这个图形是凸的; 若在坐标系内, 对于函数$f(x)$上任意两点$(x_1,y_1),(x_2,y_2)$作直线$g(x)=y=kx+b$, 能保证任取一个$x_0\in \left( x_1,x_2 \right)$均有$f(x_0)>g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$上凸(Concave). 若$f(x_0)<g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$下凸(Convex).
-    
+
     如图19所示, 对于上凸(Concave)函数典例$y=\ln x$, 对其求导可得$$y=\ln x\Longrightarrow y'=\frac{1}{x}\Longrightarrow y''=-\frac{1}{x^2}$$其中二阶导数$y''<0$, 直线函数斜率$y'$单调递减.
 
     \begin{figure}[htbp]
@@ -1048,7 +1047,7 @@
 
     如图20所示, 对于下凸(Convex)函数典例$y=e^x$, 对其求导可得$$y=e^x\Longrightarrow y'=e^x\Longrightarrow y''=e^x$$其中二阶导数$y''>0$, 直线函数斜率$y'$单调递增.
 
-    \begin{figure}[htbp] 
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{img/ConcaveFunctionIntro.eps}
         \caption{下凸函数$\displaystyle y=e^x$的性质}
@@ -1075,7 +1074,7 @@
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P94,T2,P99,T12}}
 
-    \begin{figure}[htbp] 
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{img/LogExFunction.eps}
         \caption{切线放缩}
@@ -1088,10 +1087,10 @@
     \begin{table}[htbp]
         \centering
         \begin{tabular}{|l|l|l|l|}
-        \hline
-        $x$     & $(-\infty,0)$ & 0   & $(0,+\infty)$ \\ \hline
-        $f'(x)$ & $<0$          & 0   & $>0$          \\ \hline
-        $f(x)$  & 单调递减          & 极小值 & 单调递增          \\ \hline
+            \hline
+            $x$     & $(-\infty,0)$ & 0   & $(0,+\infty)$ \\ \hline
+            $f'(x)$ & $<0$          & 0   & $>0$          \\ \hline
+            $f(x)$  & 单调递减          & 极小值 & 单调递增          \\ \hline
         \end{tabular}
     \end{table}
     所以$$f(x)\ge f(0)=0\Longrightarrow e^x-x-1\ge 0\Longrightarrow e^x\ge x+1.\blacksquare$$
@@ -1103,12 +1102,12 @@
     \begin{table}[htbp]
         \centering
         \begin{tabular}{|l|l|l|l|}
-        \hline
-        $x$     & $(0,1)$ & 1   & $(1,+\infty)$ \\ \hline
-        $f'(x)$ & $<0$    & 0   & $>0$          \\ \hline
-        $f(x)$  & 单调递减    & 极小值 & 单调递增          \\ \hline
+            \hline
+            $x$     & $(0,1)$ & 1   & $(1,+\infty)$ \\ \hline
+            $f'(x)$ & $<0$    & 0   & $>0$          \\ \hline
+            $f(x)$  & 单调递减    & 极小值 & 单调递增          \\ \hline
         \end{tabular}
-        \end{table}
+    \end{table}
 
     所以$$f(x)\ge f(1)=0\Longrightarrow x-1-\ln x\ge 0\Longrightarrow \ln x\le x-1.\blacksquare$$
 
@@ -1124,7 +1123,7 @@
 
     再证明右侧:$\tan x-x>0$, 令$f(x)=\tan x-x$, $\displaystyle f'(x)=\frac{1}{\cos^2x}-1>0,f(x)>f(0)=0$.$\blacksquare$
 
-    \begin{figure}[htbp] 
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{img/CircleSinTan.eps}
         \caption{几何法}
@@ -1155,16 +1154,16 @@
     \begin{table}[htbp]
         \centering
         \begin{tabular}{lllllllll}
-          &   &   & 1 &   & 1 &   &   &   \\
-          &   & 1 &   & 2 &   & 1 &   &   \\
-          & 1 &   & 3 &   & 3 &   & 1 &   \\
-        1 &   & 4 &   & 6 &   & 4 &   & 1 \\
+              &   &   & 1 &   & 1 &   &   &   \\
+              &   & 1 &   & 2 &   & 1 &   &   \\
+              & 1 &   & 3 &   & 3 &   & 1 &   \\
+            1 &   & 4 &   & 6 &   & 4 &   & 1 \\
         \end{tabular}
-        \end{table}
+    \end{table}
     \begin{center}
         $\cdots$
     \end{center}
-    
+
     杨辉三角的性质:
 
     \begin{enumerate}
@@ -1181,7 +1180,7 @@
     设$A_1,A_2,A_3$;表示3个门有奖品的3种情况; $B_1,B_2,B_3$, 表示主持人会打开的门的3种情况. 此时$\displaystyle P(A_1)=P(A_2)=P(A_3)=\frac{1}{3}$,如果我选1, 主持人在2,3中挑选, 我们对主持人开2号门进行研究; 其中$\displaystyle P\left( B_2\Big|A_1 \right)=\frac{1}{2},P\left( B_2\Big|A_2 \right)=0,P\left( B_2\Big|A_3 \right)=1$;全概率: $$P\left( B_2 \right)=\sum_{i=1}^{3} P(A_i)P\left ( B_2\Big |A_i \right ) =\frac{1}{3}\times \frac{1}{2} +\frac{1}{3}\times 0+\frac{1}{3}\times 1=\frac{1}{2} $$贝叶斯:$$P\left( A_1\Big|B_2 \right)\frac{P(A_1)P\left( B_2\Big|A_1 \right)}{P(B_2)}=\frac{1}{3};P\left( A_3\Big|B_2 \right)\frac{P(A_3)P\left( B_2\Big|A_3 \right)}{P(B_2)}=\frac{2}{3}$$
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P91, T10}}
     这里涉及\textcolor[rgb]{0.38,0.11,0.2}{马尔可夫链}.
-    
+
     \begin{boxB}
         甲, 乙, 丙三人相互做传球训练, 第1次由甲将球传出, 每次传球时, 传球者都等可能地将球传给另外两个人中的任何一人, 求$n$次传球后球在甲手中的概率.
     \end{boxB}
@@ -1189,15 +1188,15 @@
     记$P_n$表示第$n$次传球后球在甲手中, 其中$P_1=0$(因为甲第一次传出去)如果$n+1$次回到甲手中, 此时第$n$次就不可能在甲手中了, 此时\textcolor[rgb]{0.75,0.17,0.22}{第$n$次不在甲手中的概率是$(1-P_n)$}
 
     此时第$n$次可能有四种情况: 乙$\rightarrow$甲, 乙$\rightarrow$丙, 丙$\rightarrow$甲, 丙$\rightarrow$乙, 又该过程中情况等概率, 则$n+1$次到甲手中概率是, 由分步计数乘法可知:$$P_{n+1}=\frac{1}{2}\left( 1-P_n \right)=\frac{1}{2}-\frac{1}{2}P_n\Longrightarrow P_{n+1}-\frac{1}{3}=-\frac{1}{2}\left( P_n-\frac{1}{3} \right)$$由此可得$$P_n=\frac{1}{3}-\frac{1}{3}\left( -\frac{1}{2} \right)^{n-1}$$
-    本质考察数列与概率的结合, 实际上涉及\textcolor[rgb]{0.38,0.11,0.2}{马尔科夫链}的相关知识. 
+本质考察数列与概率的结合, 实际上涉及\textcolor[rgb]{0.38,0.11,0.2}{马尔科夫链}的相关知识.
 
-    \begin{thebibliography}{99}
-        \bibitem{cccommons}Deed, Attribution-NonCommercial-ShareAlike 4.0 International, Creative Commons, Fri, 4 May, 2024. Web. 25 Oct 2024.
-        \bibitem{complex}Incidence bounds with Möbius hyperbolae in positive characteristic, Misha Rudnev, James Wheeler, Wed, 21 Apr 2021 13:47:42 UTC.
-        \bibitem{Fibonacci}Wikipedia contributors. "Fibonacci sequence." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 15 Oct. 2024. Web. 19 Oct. 2024.
-        \bibitem{induction}Wikipedia contributors. "Mathematical induction." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 9 Sep. 2024. Web. 19 Oct. 2024.
-        \bibitem{Newton}Wikipedia contributors. "Newton's method." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 14 Oct. 2024. Web. 20 Oct. 2024.
-        \bibitem{Young}Hardy, G. H.; Littlewood, J. E.; and Pólya, G. "A Theorem of W. H. Young." §8.3 in Inequalities, 2nd ed. Cambridge, England: Cambridge University Press, pp. 198-200, 1988.
-    \end{thebibliography}
+\begin{thebibliography}{99}
+    \bibitem{cccommons}Deed, Attribution-NonCommercial-ShareAlike 4.0 International, Creative Commons, Fri, 4 May, 2024. Web. 25 Oct 2024.
+    \bibitem{complex}Incidence bounds with Möbius hyperbolae in positive characteristic, Misha Rudnev, James Wheeler, Wed, 21 Apr 2021 13:47:42 UTC.
+    \bibitem{Fibonacci}Wikipedia contributors. "Fibonacci sequence." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 15 Oct. 2024. Web. 19 Oct. 2024.
+    \bibitem{induction}Wikipedia contributors. "Mathematical induction." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 9 Sep. 2024. Web. 19 Oct. 2024.
+    \bibitem{Newton}Wikipedia contributors. "Newton's method." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 14 Oct. 2024. Web. 20 Oct. 2024.
+    \bibitem{Young}Hardy, G. H.; Littlewood, J. E.; and Pólya, G. "A Theorem of W. H. Young." §8.3 in Inequalities, 2nd ed. Cambridge, England: Cambridge University Press, pp. 198-200, 1988.
+\end{thebibliography}
 
 \end{document}
