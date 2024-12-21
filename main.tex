@@ -104,7 +104,14 @@
 
     对于证明题, 证毕后会带上一个象征性的$qed$符号代表结束$\blacksquare$
 
-    我们鼓励读者养成独立思考的习惯, 某些题目后面会跟一点小练习, 请尝试完成它; 如果你准备好了, 那就翻到第二章开始阅读吧!
+    \section{特别鸣谢}
+    本鸣谢名单收录最早提出相关修改建议的读者, 感谢你们的付出让这个项目更加完美!
+    \begin{enumerate}
+        \item bilibili 芜湖菜菜子 uid-33071462 凹凸性相关勘误
+        \item bilibili JamesShen16 uid-516283330 提出分别对应英文Convex和Concave的相关勘误
+        \item bilibili 早仓雅 uid-82799 和差化积相关证明, 二位权方和相关证明, 勘误
+    \end{enumerate}
+    %我们鼓励读者养成独立思考的习惯, 某些题目后面会跟一点小练习, 请尝试完成它; 如果你准备好了, 那就翻到第二章开始阅读吧!
     \chapter{必修一}
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P43, T9}}
     \begin{boxB}
@@ -180,8 +187,8 @@
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P101, T8}}
     \begin{boxB}
         \begin{enumerate}
-            \item 若$f(x)=ax+b$, $\displaystyle f(\frac{x_1x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$.
-            \item 若$g(x)=x^2+ax+b$则$\displaystyle f(\frac{x_1x_2}{2})\le \frac{g(x_1)+f(x_2)}{2}$.
+            \item 若$f(x)=ax+b$, $\displaystyle f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$.
+            \item 若$g(x)=x^2+ax+b$则$\displaystyle g(\frac{x_1+x_2}{2})\le \frac{g(x_1)+g(x_2)}{2}$.
         \end{enumerate}
     \end{boxB}
     本题实际上涉及了\textcolor[rgb]{0.38,0.11,0.2}{凹凸性}以及\textcolor[rgb]{0.38,0.11,0.2}{琴生不等式}的相关知识, 相关说明如下:
@@ -301,6 +308,18 @@
         \item 根据上述结论得:$$\sin(a+b) +\sin(a-b)=2\sin a\cos b$$\textcolor[rgb]{0.75,0.17,0.22}{令$a+b=\theta$, $a-b=\varphi$,则有$\displaystyle a=\frac{\theta+\varphi}{2},b=\frac{\theta-\varphi}{2}$}, 代入便可得证. $\blacksquare$
     \end{enumerate}
 
+    和差化积的另外一种证法(哔哩哔哩-早仓雅提供):
+    $$
+    \sin \theta + \sin \varphi =\sin \left( \frac{\theta+\varphi}{2}+ \frac{\theta -\varphi}{2} \right)+\sin \left( \frac{\theta+\varphi}{2}- \frac{\theta -\varphi}{2} \right)
+    $$
+    展开正弦公式可原式得到:
+    $$
+    \left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}+\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)+\left( \sin \frac{\theta +\varphi}{2}\cos \frac{\theta -\varphi}{2}-\cos \frac{\theta +\varphi}{2}\sin \frac{\theta -\varphi}{2} \right)
+    $$
+    化简可得
+    $$
+    \sin \theta + \sin \varphi = 2\sin\frac{\theta+\varphi}{2}\cos\frac{\theta-\varphi}{2}.\blacksquare
+    $$
     其它的\textcolor[rgb]{0.38,0.11,0.2}{积化和差}:
     \begin{enumerate}
         \item $\displaystyle \sin a\sin b=-\frac{1}{2}[\cos(a+b)-\cos(a-b)]$
@@ -450,8 +469,8 @@
         证明: 构造向量$\overrightarrow{a}=(a,b),\overrightarrow{b}=(c,d)$其夹角为$\theta$由$\cos \theta \in [-1,1]$可知$\cos ^2 \theta \le 1$则有$$\cos ^2 \theta=\left (\frac{\overrightarrow{a}\cdot \overrightarrow{b}}{|\overrightarrow{a}|\cdot |\overrightarrow{b}|}\right ) ^2=\left ( \frac{ac+bd}{\sqrt{a^2+b^2}\cdot \sqrt{c^2+d^2}} \right )^2 \le 1$$
         解得$$(ac+bd)^2 \le (a^2+b^2)(c^2+d^2)$$
         由\textcolor[rgb]{0.38,0.11,0.2}{柯西不等式}可引申出\textcolor[rgb]{0.38,0.11,0.2}{二维的权方和不等式}$$\frac{x_1^2}{y_1}+\frac{x_2^2}{y_2}\ge \frac{(x_1+x_2)^2}{y_1+y_2}$$
-        令$\displaystyle a^2=\frac{x_1^2}{y_1},b^2\frac{x_2^2}{y_2},c^2=y_1,d^2=y_2$
-        $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\ge \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )=(x_1+x_2)^2$$
+        令$\displaystyle a^2=\frac{x_1^2}{y_1},b^2=\frac{x_2^2}{y_2},c^2=y_1,d^2=y_2$
+        $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\ge \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )^2=(x_1+x_2)^2$$
         当且仅当$\displaystyle \frac{x_1}{y_1}=\frac{x_2}{y_2}$等号成立.$\blacksquare$
         \section{\textcolor[rgb]{0.11,0.65,0.52}{P39, 例2}}
         已知图5有$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC},\overrightarrow{DB}=\overrightarrow{AB}-\overrightarrow{BC}$, 则有$$\overrightarrow{AC}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2+2\overrightarrow{AB}\cdot \overrightarrow{BC},\overrightarrow{DB}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2-2\overrightarrow{AB}\cdot \overrightarrow{BC}$$
@@ -1015,9 +1034,9 @@
 
     此处拓展\textcolor[rgb]{0.38,0.11,0.2}{琴生不等式}和\textcolor[rgb]{0.38,0.11,0.2}{凹凸性}的关系, 由于各种课本对凹凸的概念不同, 故这里均指明是上凸还是下凸, 分别对应英文Convex和Concave.
 
-    对于几何性质的定义, 若在封闭图形上任意取2点作线段能够满足线段上的点均在封闭图形内, 我们称这个图形是凸的; 若在坐标系内, 对于函数$f(x)$上任意两点$(x_1,y_1),(x_2,y_2)$作直线$g(x)=y=kx+b$, 能保证任取一个$x_0\in \left( x_1,x_2 \right)$均有$f(x_0)>g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$上凸(Convex). 若$f(x_0)<g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$下凸(Concave).
+    对于几何性质的定义, 若在封闭图形上任意取2点作线段能够满足线段上的点均在封闭图形内, 我们称这个图形是凸的; 若在坐标系内, 对于函数$f(x)$上任意两点$(x_1,y_1),(x_2,y_2)$作直线$g(x)=y=kx+b$, 能保证任取一个$x_0\in \left( x_1,x_2 \right)$均有$f(x_0)>g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$上凸(Concave). 若$f(x_0)<g(x_0)$, 则称这个函数$f(x)$在$\left( x_1,x_2 \right)$下凸(Convex).
     
-    如图19所示, 对于上凸(Convex)函数典例$y=\ln x$, 对其求导可得$$y=\ln x\Longrightarrow y'=\frac{1}{x}\Longrightarrow y''=-\frac{1}{x^2}$$其中二阶导数$y''<0$, 直线函数斜率$y'$单调递减.
+    如图19所示, 对于上凸(Concave)函数典例$y=\ln x$, 对其求导可得$$y=\ln x\Longrightarrow y'=\frac{1}{x}\Longrightarrow y''=-\frac{1}{x^2}$$其中二阶导数$y''<0$, 直线函数斜率$y'$单调递减.
 
     \begin{figure}[htbp]
         \centering
@@ -1027,7 +1046,7 @@
 
     其中有$$f\left( \frac{x_1+x_2}{2} \right)\ge \frac{f\left( x_1 \right)+f\left( x_2 \right)}{2}$$当且仅当$x_1=x_2$取等. 拓展到$n$维$$f\left( \frac{x_1+x_2+x_3+\cdots+x_n}{n} \right)\ge \frac{f(x_1)+f(x_2)+f(x_3)+\cdots+f(x_n)}{n}$$简写为$$f\left( \sum_{i=0}^{n}\frac{x_i }{n} \right)\ge \sum_{i=0}^{n}\frac{f(x_i) }{n}$$当且仅当$x_1=x_2=x_3=\cdots=x_n$取等.
 
-    如图20所示, 对于下凸(Concave)函数典例$y=e^x$, 对其求导可得$$y=e^x\Longrightarrow y'=e^x\Longrightarrow y''=e^x$$其中二阶导数$y''>0$, 直线函数斜率$y'$单调递增.
+    如图20所示, 对于下凸(Convex)函数典例$y=e^x$, 对其求导可得$$y=e^x\Longrightarrow y'=e^x\Longrightarrow y''=e^x$$其中二阶导数$y''>0$, 直线函数斜率$y'$单调递增.
 
     \begin{figure}[htbp] 
         \centering
