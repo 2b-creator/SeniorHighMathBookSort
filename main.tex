@@ -187,14 +187,14 @@ $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f
     \begin{boxB}
         \begin{enumerate}
             \item 若$f(x)=ax+b$, $\displaystyle f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$.
-            \item 若$g(x)=x^2+ax+b$则$\displaystyle g(\frac{x_1+x_2}{2})\le \frac{g(x_1)+g(x_2)}{2}$.
+            \item 若$g(x)=x^2+ax+b$则$\displaystyle g(\frac{x_1+x_2}{2})\leqslant \frac{g(x_1)+g(x_2)}{2}$.
         \end{enumerate}
     \end{boxB}
     本题实际上涉及了\textcolor[rgb]{0.38,0.11,0.2}{凹凸性}以及\textcolor[rgb]{0.38,0.11,0.2}{琴生不等式}的相关知识, 相关说明如下:
     \begin{enumerate}
         \doublespacing
         \item $\displaystyle f(\frac{x_1+x_2}{2})=a\cdot \frac{x_1+x_2}{2}+b, \frac{f(x_1)+f(x_2)}{2}=\frac{ax_1+b+ax_2+b}{2}=a\cdot \frac{x_1+x_2}{2}+b$.
-        \item \textcolor[rgb]{0.75,0.17,0.22}{作差分析}: $\displaystyle g(\frac{x_1+x_2}{2})-\frac{g(x_1)+g(x_2)}{2}\\=(\frac{x_1+x_2}{2})^2+a\frac{x_1+x_2}{2}+b-\frac{x_1^2+ax_1+b+x_2^2+ax_2+b}{2}\\=-\frac{x_1^2-2x_1x_2+x_2^2}{4}=-\frac{(x_1-x_2)^2}{4}\le 0$.$\blacksquare$
+        \item \textcolor[rgb]{0.75,0.17,0.22}{作差分析}: $\displaystyle g(\frac{x_1+x_2}{2})-\frac{g(x_1)+g(x_2)}{2}\\=(\frac{x_1+x_2}{2})^2+a\frac{x_1+x_2}{2}+b-\frac{x_1^2+ax_1+b+x_2^2+ax_2+b}{2}\\=-\frac{x_1^2-2x_1x_2+x_2^2}{4}=-\frac{(x_1-x_2)^2}{4}\leqslant 0$.$\blacksquare$
     \end{enumerate}
     此处仅是解题并指出, 在选必二中会对其相关知识加以拓充补充.
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P101, T12}}
@@ -227,7 +227,7 @@ $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f
     \end{boxB}
     证明: 由于$\displaystyle \lim_{x \to \infty} (1+\frac{1}{n} )^n=e$, $\displaystyle (1+\frac{1}{n} )^n$的形式可以使用二项式定理, 令$\displaystyle f(n)=(1+\frac{1}{n} )^n$:
     $$
-        f(n)=(1+\frac{1}{n})^n=1+C_n^1\frac{1}{n}+C_n^2\frac{1}{n}+C_n^3\frac{1}{n}+\cdots +C_n^n\frac{1}{n^n}
+        f(n)=(1+\frac{1}{n})^n=1+C_n^1\frac{1}{n^1}+C_n^2\frac{1}{n^2}+C_n^3\frac{1}{n^3}+\cdots +C_n^n\frac{1}{n^n}
     $$
     展开组合式可得:
     $$
@@ -237,7 +237,7 @@ $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f
     $$
         f(n)=1+1+\frac{1}{2!}(1-\frac{1}{n})+\frac{1}{3!}(1-\frac{1}{n})(1-\frac{2}{n})+\cdots +\frac{1}{n!}(1-\frac{1}{n})(1-\frac{2}{n})(1-\frac{3}{n})\cdots (1-\frac{n-1}{n})
     $$
-    当$n\ge 4$时, $n!=1\times2\times3\times4\times\cdots \times n>n(n-1)$
+    当$n\geqslant 4$时, $n!=1\times2\times3\times4\times\cdots \times n>n(n-1)$
     所以:
     $$
         f(n)<1+1+\frac{1}{2!}+\frac{1}{3!}+\frac{1}{3\times4}+\frac{1}{4\times5}+\cdots +\frac{1}{n(n-1)}
@@ -248,7 +248,7 @@ $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f
     $$
     右式裂项得:
     $$
-        2+1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\cdots-\frac{1}{n} \le 3
+        2+1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\cdots-\frac{1}{n} \leqslant 3
     $$
     所以$e<3$.$\blacksquare$
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P160, T6}}
@@ -269,7 +269,7 @@ $y=f(x+a)-b$奇函数$\Longrightarrow f(x+a)b=[f(a-x)-b]$通过变形可得到$f
 
     还有其它性质:$\cosh x$是偶函数, $\sinh x$是奇函数.
 
-    另外还有由\textcolor[rgb]{0.75,0.17,0.22}{基本不等式}可知: $\displaystyle \sinh x=\frac{e^x+e^{-x}}{2} \ge \frac{2\sqrt{e^xe^{-x}}}{2}=1$
+    另外还有由\textcolor[rgb]{0.75,0.17,0.22}{基本不等式}可知: $\displaystyle \sinh x=\frac{e^x+e^{-x}}{2} \geqslant \frac{2\sqrt{e^xe^{-x}}}{2}=1$
 
     \textcolor[rgb]{0.38,0.11,0.2}{回看问题1,$x^2+y^2=1$代表单位圆$x=\cos \theta, y=\sin \theta$, 而$x^2-y^2=1$代表单位双曲线$x=\cosh t, y=\sinh t$.}
 
@@ -465,11 +465,11 @@ $\displaystyle |\overrightarrow{a}+\overrightarrow{b}|$可表示这条对角线�
 
     本题实际上是证明\textcolor[rgb]{0.38,0.11,0.2}{二维的柯西不等式}
 
-    证明: 构造向量$\overrightarrow{a}=(a,b),\overrightarrow{b}=(c,d)$其夹角为$\theta$由$\cos \theta \in [-1,1]$可知$\cos ^2 \theta \le 1$则有$$\cos ^2 \theta=\left (\frac{\overrightarrow{a}\cdot \overrightarrow{b}}{|\overrightarrow{a}|\cdot |\overrightarrow{b}|}\right ) ^2=\left ( \frac{ac+bd}{\sqrt{a^2+b^2}\cdot \sqrt{c^2+d^2}} \right )^2 \le 1$$
-    解得$$(ac+bd)^2 \le (a^2+b^2)(c^2+d^2)$$
-    由\textcolor[rgb]{0.38,0.11,0.2}{柯西不等式}可引申出\textcolor[rgb]{0.38,0.11,0.2}{二维的权方和不等式}$$\frac{x_1^2}{y_1}+\frac{x_2^2}{y_2}\ge \frac{(x_1+x_2)^2}{y_1+y_2}$$
+    证明: 构造向量$\overrightarrow{a}=(a,b),\overrightarrow{b}=(c,d)$其夹角为$\theta$由$\cos \theta \in [-1,1]$可知$\cos ^2 \theta \leqslant 1$则有$$\cos ^2 \theta=\left (\frac{\overrightarrow{a}\cdot \overrightarrow{b}}{|\overrightarrow{a}|\cdot |\overrightarrow{b}|}\right ) ^2=\left ( \frac{ac+bd}{\sqrt{a^2+b^2}\cdot \sqrt{c^2+d^2}} \right )^2 \leqslant 1$$
+    解得$$(ac+bd)^2 \leqslant (a^2+b^2)(c^2+d^2)$$
+    由\textcolor[rgb]{0.38,0.11,0.2}{柯西不等式}可引申出\textcolor[rgb]{0.38,0.11,0.2}{二维的权方和不等式}$$\frac{x_1^2}{y_1}+\frac{x_2^2}{y_2}\geqslant \frac{(x_1+x_2)^2}{y_1+y_2}$$
     令$\displaystyle a^2=\frac{x_1^2}{y_1},b^2=\frac{x_2^2}{y_2},c^2=y_1,d^2=y_2$
-    $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\ge \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )^2=(x_1+x_2)^2$$
+    $$\left ( \frac{x_1^2}{y_1}+\frac{x_2^2}{y_2} \right )(y_1+y_2)\geqslant \left ( \frac{x_1}{\sqrt{y_1}}\sqrt{y_1}+\frac{x_2}{\sqrt{y_2}}\sqrt{y_2} \right )^2=(x_1+x_2)^2$$
     当且仅当$\displaystyle \frac{x_1}{y_1}=\frac{x_2}{y_2}$等号成立.$\blacksquare$
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P39, 例2}}
     已知图5有$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC},\overrightarrow{DB}=\overrightarrow{AB}-\overrightarrow{BC}$, 则有$$\overrightarrow{AC}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2+2\overrightarrow{AB}\cdot \overrightarrow{BC},\overrightarrow{DB}^2=\overrightarrow{AB}^2+\overrightarrow{BC}^2-2\overrightarrow{AB}\cdot \overrightarrow{BC}$$
@@ -564,9 +564,9 @@ $\displaystyle |\overrightarrow{a}+\overrightarrow{b}|$可表示这条对角线�
         \end{cases}
     $$
     等价的说, 对任何$k=1,2,3,\cdots,n$系数比${\displaystyle {\frac {a_{n-k}}{a_{n}}}}$是所有任取 $k$ 个根的乘积的和的${\displaystyle (-1)^{k}}$倍, 即:
-    $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} x_{i_1}x_{i_2}\cdots x_{i_k}=(-1)^k\frac{a_{n-k}}{a_n}$$
+    $$\sum_{1\leqslant i_1 < i_2 < \cdots < i_k\leqslant n} x_{i_1}x_{i_2}\cdots x_{i_k}=(-1)^k\frac{a_{n-k}}{a_n}$$
     或:
-    $$\sum_{1\le i_1 < i_2 < \cdots < i_k\le n} \left(\prod_{j = 1}^k x_{i_j}\right)=(-1)^k\frac{a_{n-k}}{a_n}$$
+    $$\sum_{1\leqslant i_1 < i_2 < \cdots < i_k\leqslant n} \left(\prod_{j = 1}^k x_{i_j}\right)=(-1)^k\frac{a_{n-k}}{a_n}$$
     其中 $i_1 < i_2 < \cdots < i_k$< 是要让所有的根的组合都恰好出现一次.
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P91}}
     \begin{boxB}
@@ -939,13 +939,13 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
     总结操作: 此方法用到多项式的\textcolor[rgb]{0.75,0.17,0.22}{差分}操作, 利用$n^3-(n-1)^3$求和过程可约分来构造立方差公式的操作技巧.
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P50}}
     \begin{boxB}
-        证明: 若$x>-1,a>1$, 则$\displaystyle \left( 1+x \right)^a\ge 1+ax$; 若$x>-1,0<a<1$, 则$\displaystyle \left( 1+x \right)^a\le 1+ax$
+        证明: 若$x>-1,a>1$, 则$\displaystyle \left( 1+x \right)^a\geqslant 1+ax$; 若$x>-1,0<a<1$, 则$\displaystyle \left( 1+x \right)^a\leqslant 1+ax$
     \end{boxB}
     此处涉及了\textcolor[rgb]{0.38,0.11,0.2}{伯努利不等式}下面是证明过程:
 
     此处证明第二种情况, 可自行类比第一种情况; 证明: $x>-1,0<a<1$, \textcolor[rgb]{0.75,0.17,0.22}{作差构造函数}, 令$\displaystyle f(x)=\left( 1+x \right)^a-1-ax$, 对其求导可得$$f'(x)=a\left[ \left( 1+x \right)^{a-1}-1 \right]$$
     当 $-1<x<0$ 时:$f'(x)>0$, $f(x)$单调递增, 当$x>0$时, $f'(x)<0$, $f(x)$单调递减.
-    $$f(x)_{\max }=f(0)=0\Longrightarrow \left( 1+x \right)^a-1-ax\le 0\Longrightarrow \left( 1+x \right)^a\le 1+ax.\blacksquare$$
+    $$f(x)_{\max }=f(0)=0\Longrightarrow \left( 1+x \right)^a-1-ax\leqslant 0\Longrightarrow \left( 1+x \right)^a\leqslant 1+ax.\blacksquare$$
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P52, T10}}
 
@@ -955,7 +955,7 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
 
     已知数列$\left\{ a_n \right\}$满足$a_1=m,m\in \mathbb{Z}^+$,$\displaystyle a_{n+1}=\left\{\begin{matrix}
     \displaystyle \frac{a_n}{2},a_n\in\left \{ x|x=2k,k\in \mathbb{Z}  \right \} \\
-    3a_n+1 a_n\in\left \{ x|x=2k-1,k\in \mathbb{Z}  \right \}
+    3a_n+1, a_n\in\left \{ x|x=2k-1,k\in \mathbb{Z}  \right \}
 \end{matrix}\right. $
 
     (1)当$m=17$, 试确定$a_n=1$需要多少步雹程;
@@ -1008,7 +1008,7 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
 
     三次函数$\displaystyle y=ax^3+bx^2+cx+d,(a\neq 0)$的性质:
     \begin{enumerate}
-        \item 单调性: 若$b2-3ac\le 0$, 在$\mathbb{R}$上单调; 若$b2-3ac> 0$, 在$\mathbb{R}$上有三个单调区间;
+        \item 单调性: 若$b2-3ac\leqslant 0$, 在$\mathbb{R}$上单调; 若$b2-3ac> 0$, 在$\mathbb{R}$上有三个单调区间;
         \item 对称中心: 关于点$\displaystyle \left( -\frac{b}{3a},f\left( -\frac{b}{3a} \right) \right)$对称, \textcolor[rgb]{0.75,0.17,0.22}{横坐标为导数极值点或二阶导数零点};
         \item 韦达定理: 见前文4.7;
         \item 穿针引线法(奇穿偶不穿): 建议从右边往左边画(好判断正负);
@@ -1043,7 +1043,7 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
         \caption{上凸函数$\displaystyle y=\ln x$的性质}
     \end{figure}
 
-    其中有$$f\left( \frac{x_1+x_2}{2} \right)\ge \frac{f\left( x_1 \right)+f\left( x_2 \right)}{2}$$当且仅当$x_1=x_2$取等. 拓展到$n$维$$f\left( \frac{x_1+x_2+x_3+\cdots+x_n}{n} \right)\ge \frac{f(x_1)+f(x_2)+f(x_3)+\cdots+f(x_n)}{n}$$简写为$$f\left( \sum_{i=0}^{n}\frac{x_i }{n} \right)\ge \sum_{i=0}^{n}\frac{f(x_i) }{n}$$当且仅当$x_1=x_2=x_3=\cdots=x_n$取等.
+    其中有$$f\left( \frac{x_1+x_2}{2} \right)\geqslant \frac{f\left( x_1 \right)+f\left( x_2 \right)}{2}$$当且仅当$x_1=x_2$取等. 拓展到$n$维$$f\left( \frac{x_1+x_2+x_3+\cdots+x_n}{n} \right)\geqslant \frac{f(x_1)+f(x_2)+f(x_3)+\cdots+f(x_n)}{n}$$简写为$$f\left( \sum_{i=0}^{n}\frac{x_i }{n} \right)\geqslant \sum_{i=0}^{n}\frac{f(x_i) }{n}$$当且仅当$x_1=x_2=x_3=\cdots=x_n$取等.
 
     如图20所示, 对于下凸(Convex)函数典例$y=e^x$, 对其求导可得$$y=e^x\Longrightarrow y'=e^x\Longrightarrow y''=e^x$$其中二阶导数$y''>0$, 直线函数斜率$y'$单调递增.
 
@@ -1053,22 +1053,22 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
         \caption{下凸函数$\displaystyle y=e^x$的性质}
     \end{figure}
 
-    其中有$$f\left( \frac{x_1+x_2}{2} \right)\le \frac{f\left( x_1 \right)+f\left( x_2 \right)}{2}$$当且仅当$x_1=x_2$取等. 拓展到$n$维$$f\left( \frac{x_1+x_2+x_3+\cdots+x_n}{n} \right)\le \frac{f(x_1)+f(x_2)+f(x_3)+\cdots+f(x_n)}{n}$$简写为$$f\left( \sum_{i=0}^{n}\frac{x_i }{n} \right)\le \sum_{i=0}^{n}\frac{f(x_i) }{n}$$当且仅当$x_1=x_2=x_3=\cdots=x_n$取等.
+    其中有$$f\left( \frac{x_1+x_2}{2} \right)\leqslant \frac{f\left( x_1 \right)+f\left( x_2 \right)}{2}$$当且仅当$x_1=x_2$取等. 拓展到$n$维$$f\left( \frac{x_1+x_2+x_3+\cdots+x_n}{n} \right)\leqslant \frac{f(x_1)+f(x_2)+f(x_3)+\cdots+f(x_n)}{n}$$简写为$$f\left( \sum_{i=0}^{n}\frac{x_i }{n} \right)\leqslant \sum_{i=0}^{n}\frac{f(x_i) }{n}$$当且仅当$x_1=x_2=x_3=\cdots=x_n$取等.
 
     如果是二维琴生不在中点而是一般的点就有加权形式:
     \begin{enumerate}
-        \item 上凸函数: $f\left( ax_1+\left( 1-a \right)x_2 \right)\ge af\left( x_1 \right)+(1-a)f\left( x_2 \right)$
-        \item 下凸函数: $f\left( ax_1+\left( 1-a \right)x_2 \right)\le af\left( x_1 \right)+(1-a)f\left( x_2 \right)$
+        \item 上凸函数: $f\left( ax_1+\left( 1-a \right)x_2 \right)\geqslant af\left( x_1 \right)+(1-a)f\left( x_2 \right)$
+        \item 下凸函数: $f\left( ax_1+\left( 1-a \right)x_2 \right)\leqslant af\left( x_1 \right)+(1-a)f\left( x_2 \right)$
     \end{enumerate}
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P52, T10}}
 
     本题涉及\textcolor[rgb]{0.38,0.11,0.2}{杨氏不等式}.\cite{Young}
 
-    指出：假设${\displaystyle a}$, ${\displaystyle b}$, ${\displaystyle p}$和${\displaystyle q}$是正实数, 且有${\displaystyle {\frac {1}{p}}+{\frac {1}{q}}=1}$那么:$${\displaystyle ab\leq {\frac {a^{p}}{p}}+{\frac {b^{q}}{q}}}$$等号成立当且仅当${\displaystyle a^{p}=b^{q}}$因为这时${\displaystyle ab=a(b^{q})^{1 \over q}=aa^{p \over q}=a^{p}={a^{p} \over p}+{b^{q} \over q}}$
+    指出：假设${\displaystyle a}$, ${\displaystyle b}$, ${\displaystyle p}$和${\displaystyle q}$是正实数, 且有${\displaystyle {\frac {1}{p}}+{\frac {1}{q}}=1}$那么:$${\displaystyle ab\leqslant {\frac {a^{p}}{p}}+{\frac {b^{q}}{q}}}$$等号成立当且仅当${\displaystyle a^{p}=b^{q}}$因为这时${\displaystyle ab=a(b^{q})^{1 \over q}=aa^{p \over q}=a^{p}={a^{p} \over p}+{b^{q} \over q}}$
 
-    证明: 我们知道函数${\displaystyle f(x)=e^{x}}$为下凸函数, 因为它的二阶导数恒为正. 从而我们有$${\displaystyle ab=e^{\ln(a)}e^{\ln(b)}=e^{{1 \over p}\ln(a^{p})+{1 \over q}\ln(b^{q})}\leq {1 \over p}e^{\ln(a^{p})}+{1 \over q}e^{\ln(b^{q})}={a^{p} \over p}+{b^{q} \over q}}$$这里我们使用了下凸函数的一个性质: 对任意$t$, 若${\displaystyle 0<t<1}$则有:$${\displaystyle f(tx+(1-t)y)\leq tf(x)+(1-t)f(y)}$$
-    所以有$${\displaystyle ab\leq {\frac {a^{p}}{p}}+{\frac {b^{q}}{q}}}$$成立, 当且仅当${\displaystyle a^{p}=b^{q}}$等号成立.$\blacksquare$
+    证明: 我们知道函数${\displaystyle f(x)=e^{x}}$为下凸函数, 因为它的二阶导数恒为正. 从而我们有$${\displaystyle ab=e^{\ln(a)}e^{\ln(b)}=e^{{1 \over p}\ln(a^{p})+{1 \over q}\ln(b^{q})}\leqslant {1 \over p}e^{\ln(a^{p})}+{1 \over q}e^{\ln(b^{q})}={a^{p} \over p}+{b^{q} \over q}}$$这里我们使用了下凸函数的一个性质: 对任意$t$, 若${\displaystyle 0<t<1}$则有:$${\displaystyle f(tx+(1-t)y)\leqslant tf(x)+(1-t)f(y)}$$
+    所以有$${\displaystyle ab\leqslant {\frac {a^{p}}{p}}+{\frac {b^{q}}{q}}}$$成立, 当且仅当${\displaystyle a^{p}=b^{q}}$等号成立.$\blacksquare$
 
     通过琴生不等式证明杨氏不等式我们发现不等式之间是相互证明的, 读者也可以试着用这些不等式来证明其它的不等式.
 
@@ -1080,7 +1080,7 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
         \caption{切线放缩}
     \end{figure}
 
-    \subsection{证明$e^x\ge x+1$}
+    \subsection{证明$e^x\geqslant x+1$}
 
     \textcolor[rgb]{0.75,0.17,0.22}{作差构造函数}:$f(x)=e^x-x-1$对其求导可得$f'(x)=e^x-1$
 
@@ -1093,9 +1093,9 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
             $f(x)$  & 单调递减          & 极小值 & 单调递增          \\ \hline
         \end{tabular}
     \end{table}
-    所以$$f(x)\ge f(0)=0\Longrightarrow e^x-x-1\ge 0\Longrightarrow e^x\ge x+1.\blacksquare$$
+    所以$$f(x)\geqslant f(0)=0\Longrightarrow e^x-x-1\geqslant 0\Longrightarrow e^x\geqslant x+1.\blacksquare$$
 
-    \subsection{证明$\ln x\le x-1$}
+    \subsection{证明$\ln x\leqslant x-1$}
 
     \textcolor[rgb]{0.75,0.17,0.22}{作差构造函数}:$f(x)=x-1-\ln x$对其求导可得$\displaystyle f'(x)=1-\frac{1}{x}$
 
@@ -1109,7 +1109,7 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
         \end{tabular}
     \end{table}
 
-    所以$$f(x)\ge f(1)=0\Longrightarrow x-1-\ln x\ge 0\Longrightarrow \ln x\le x-1.\blacksquare$$
+    所以$$f(x)\geqslant f(1)=0\Longrightarrow x-1-\ln x\geqslant 0\Longrightarrow \ln x\leqslant x-1.\blacksquare$$
 
     \section{\textcolor[rgb]{0.11,0.65,0.52}{P97, 练习一}}
 
@@ -1127,11 +1127,12 @@ ${\displaystyle {\begin{aligned}(\cos \theta +i\sin \theta )^{k+1}&=(\cos \theta
         \centering
         \includegraphics[width=\textwidth]{img/CircleSinTan.eps}
         \caption{几何法}
+        \label{fig:sinx}
     \end{figure}
 
     \subsection{几何法}
 
-    如图22所示: 做单位圆(半径为1),设$OC$与$OC$夹角为$\displaystyle x\in\left( 0,\frac{\pi}{2} \right)$
+    如图 \ref{fig:sinx} 所示: 做单位圆(半径为1),设$OC$与$OC$夹角为$\displaystyle x\in\left( 0,\frac{\pi}{2} \right)$
 
     由图$\displaystyle \sin x=\frac{AB}{r}=AB,\overset{\frown }{AB}=xr$, 由此可知$\sin x<x$
 
